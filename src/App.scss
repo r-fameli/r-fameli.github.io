@@ -1,0 +1,59 @@
+@use "variables";
+
+
+body {
+    background-color: variables.$color-main;
+    color: variables.$color-text;
+    font-family: variables.$font;
+}
+
+a {
+    color: inherit;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.page {
+    min-height: 100vh;
+    margin: 10vh 15vw 10vh 15vw; // top r bot left
+}
+
+.page-title {
+    margin-bottom: 15px;
+}
+
+.h-center {
+    display: flex;
+    justify-content: center;
+}
+
+.floating-box-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.floating-box-container > div {
+    width: 100%;
+}
+
+// Font sizes
+h1 {
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
+h2 {
+    font-size: 1.1rem;
+}
+
+h3 {
+    font-size: 0.9rem;
+}
+
+.nav-font {
+    font-size: 1.5rem;
+}

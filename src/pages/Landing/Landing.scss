@@ -1,0 +1,32 @@
+.landing {
+    height: 100vh;
+}
+
+.intro {
+    position: absolute;
+    top: 15%;
+    right: 18%;
+}
+
+.title {
+    font-size: 100px;
+}
+
+.subtitle {
+    font-size: 40px;
+    margin-top: -40px;
+}
+
+hr {
+    text-align: center;
+    width: 50vw;
+}
+
+.landing-list {
+    text-decoration: underline;
+    text-align: right;
+}
+
+.landing-list>div {
+    margin-top: 20px;
+}

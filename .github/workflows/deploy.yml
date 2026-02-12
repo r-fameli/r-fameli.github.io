@@ -1,0 +1,37 @@
+name: Deploy to GitHub Pages
+on:
+    push:
+        branches: [main]
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: "22"
+
+            - name: Install deps and build
+              run: |
+                  npm ci
+                  npm run build
+
+            - name: Set git identity
+              run: |
+                  git config --global user.name "r-fameli"
+                  git config --global user.email "rikifameli@gmail.com"
+                  git config --global url.https://${{ secrets.GITHUB_TOKEN }}@github.com/.insteadOf https://github.com/
+
+            - name: Deploy to gh-pages
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  # verify origin and remotes (for debugging)
+                  git remote -v
+                  # force remote to HTTPS (ensure no SSH)
+                  git remote set-url origin https://github.com/r-fameli/r-fameli.github.io.git
+                  # ensure GH_TOKEN exported so gh-pages picks it up
+                  export GH_TOKEN="${GH_TOKEN}"
+                  # run gh-pages deploy
+                  npx gh-pages -b build -d dist 

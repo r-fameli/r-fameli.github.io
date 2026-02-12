@@ -1,0 +1,190 @@
+@use '../../variables';
+
+:root {
+    --popup-click-height:500px;
+    --video-height:400px;
+    --popup-hover-height:40px;
+    --time-hover:1s;
+    --time-down:1s;
+    --time-up:1s;
+}
+
+.FloatingBoxExpandable {
+    width: 80%;
+    border: 1px solid variables.$color-border;
+}
+
+.FloatingBoxExpandable-text {
+    background-color: variables.$color-back;
+    padding: 10px;
+    // padding-left: 30px;
+    // padding-right: 30px;
+    // padding-top: 20px;
+    // padding-bottom: 30px;
+    vertical-align: top;
+    width: 100%;
+    position:relative;
+    z-index:1;
+    overflow: hidden;
+}
+
+.FloatingBoxExpandable-text p {
+    font-size: inherit;
+}
+
+.FloatingBoxExpandable-text h1 {
+    margin-bottom: 10px;
+    text-align:center;
+}
+
+.FloatingBoxExpandable-text ul li {
+    // margin-left:20px;
+}
+
+.FloatingBoxExpandable-links {
+    text-align: right;
+}
+
+.FloatingBoxExpandable-link-btn {
+    background: whitesmoke;
+    border: 3px solid variables.$color-border; /* purple: #6e6fac */
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font:inherit;
+    transition: border 0.3s;
+}
+
+.FloatingBoxExpandable-link-btn:hover {
+    cursor: help;
+    border: 6px solid variables.$color-border;
+}
+
+.FloatingBoxExpandable-frame {
+    display:flex;
+    flex-direction: column;
+    background-color: variables.$color-shade;
+    border: 1px solid variables.$color-border;
+    padding: 30px;
+    padding-bottom: 50px;
+}
+
+.FloatingBoxExpandable-tab {
+    text-align:center;
+    background-color:variables.$color-shade;
+    border: 1px solid variables.$color-border;
+    border-bottom-width: 0;
+    width: 30%;
+    padding: 5px;
+    margin-left: auto;
+    // margin-right: auto;
+    --br:5px;
+    border-top-left-radius: var(--br);
+    border-top-right-radius: var(--br);
+}
+
+.FloatingBoxExpandable {
+    width:80%;
+    display:flex;
+    justify-content: center;
+    // margin: 20px;
+    min-height: 100px;
+    transition: margin-bottom var(--time-up), margin-top var(--time-up), box-shadow var(--time-up);
+}
+
+.FloatingBoxPopup {
+    position:absolute;
+    z-index: 0;
+    overflow:hidden;
+    width:80%;
+    height:90px;
+    transition: margin-top var(--time-up), height var(--time-up);
+}
+
+.FloatingBoxExpandable-image {
+    width: 100%;
+    height: var(--popup-click-height)
+}
+
+.FloatingBoxExpandable-video {
+    background-color: variables.$color-shade;
+    width: 100%;
+    height: var(--video-height);
+    display: block;
+}
+
+.FloatingBoxPopup-hovered {
+    margin-top: calc(-1 * var(--popup-hover-height));
+    height: var(--popup-hover-height);
+    transition: margin-top var(--time-down), height var(--time-down);
+}
+
+.FloatingBoxExpandable-hovered {
+    margin-top: var(--popup-hover-height);
+    transition: margin-bottom var(--time-down), margin-top var(--time-down), box-shadow var(--time-down);
+    box-shadow: 5px 10px variables.$color-shade;
+}
+
+.FloatingBoxPopup-clicked {
+    margin-top: calc(-1 * var(--popup-click-height));
+    height: var(--popup-click-height);
+    
+}
+
+.FloatingBoxExpandable-clicked {
+    margin-top: var(--popup-click-height);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    :root {
+        --popup-click-height:300px;
+        --video-height:200px;
+    }
+
+    .FloatingBoxExpandable-tab {
+        font-size:12px;
+    }
+
+    .FloatingBoxExpandable-text h1 {
+        margin-bottom: 10px;
+    }
+
+    .FloatingBoxExpandable-text {
+        font-size:15px;
+    }
+
+    .FloatingBoxExpandable-links {
+        text-align: center;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .FloatingBoxExpandable-tab {
+        // font-size:10px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .FloatingBoxExpandable-text {
+        // font-size:15px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .FloatingBoxExpandable-text {
+        // font-size:20px;
+    }
+    .FloatingBoxExpandable-tab {
+        font-size:20px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {
+
+} */

@@ -1,0 +1,28 @@
+.nav-menu {
+    position: sticky;
+    top: 10vh;
+    float: right;
+    margin-right: 2vw;
+    text-align: right;
+    width: max-content;
+}
+
+.nav-menu > div {
+    margin-top: 3vh;
+}
+
+.nav-menu a {
+    text-decoration: none;
+}
+
+.nav-item {
+    transition: opacity 0.5s;
+}
+
+.not-vis-item {
+    opacity: 0.3;
+}
+
+.vis-item {
+    opacity: 1;
+}

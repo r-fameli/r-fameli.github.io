@@ -1,0 +1,32 @@
+@use '../../variables';
+
+:root {
+    --box-heading-size: 150%;
+}
+
+.FloatingBox {
+    width:80%;
+    padding: 10px;
+    padding-bottom: 20px;
+    transition: box-shadow 0.7s, transform 1s;
+    color: variables.$color-text;
+}
+
+.FloatingBox:hover {
+    box-shadow: 5px 10px variables.$color-accent;
+    transform: translate(-1px, -10px);
+}
+
+.box-heading-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.FloatingBox-titling>h2 {
+    display: inline;
+    margin-right: 10px;
+}
+
+.FloatingBox-title {
+    color: variables.$color-accent;
+}

@@ -1,0 +1,80 @@
+@use '../../variables';
+
+$big-circle-size: 300px;
+$little-circles-frame-size: 300px;
+$small-circle-size: 120px;
+
+
+.CirclingIcons {
+  height: 100vh;
+  position: relative;
+}
+
+.circling-icons-frame {
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  margin-left: calc(-1 / 2 * 100vw);
+  margin-top: calc(-1 / 2 * 100vh);
+  overflow: hidden;
+}
+
+.big-circle {
+  z-index: 1;
+  border-radius: 50%;
+  width: $big-circle-size;
+  height: $big-circle-size;
+  position: absolute;
+  left: 50%;
+  margin-left: calc(-1 / 2 * $big-circle-size);
+  top: 50%;
+  margin-top: calc(-1 / 2 * $big-circle-size);
+  background-color: variables.$color-planet;
+}
+
+.little-circles {
+  padding: 0;
+  --size: 300px;
+
+  position: absolute;
+
+  width: var(--size);
+  height: var(--size);
+  left: 50%;
+  margin-left: calc(-1 / 2 * var(--size));
+  top: 50%;
+  margin-top: calc(-1 / 2 * var(--size));
+
+  list-style: none;
+}
+
+.little-circles li:first-child {
+  // background-color: orange;
+}
+
+
+.little-circles li {
+  --size: 150px;
+
+  /* Optimizations for animation */
+  will-change: transform;
+  transform-origin: center;
+
+  /* Set it to be in the center of bigCircle */
+  transform: translate3d(calc($big-circle-size / 2), calc($big-circle-size / 2), 0);
+  background-color: variables.$color-moons;
+  font-size: 50px;
+  color: black;
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  width: $small-circle-size;
+  height: $small-circle-size;
+  line-height: $small-circle-size;
+  text-align: center;
+  margin-left: calc(-1 / 2 * $small-circle-size);
+  margin-top: calc(-1 / 2 * $small-circle-size);
+}
