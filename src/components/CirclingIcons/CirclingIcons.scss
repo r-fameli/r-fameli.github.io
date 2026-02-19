@@ -1,8 +1,8 @@
 @use '../../variables';
 
-$big-circle-size: 300px;
-$little-circles-frame-size: 300px;
-$small-circle-size: 120px;
+$big-circle-size: 20cqw;
+$small-circle-size: 8cqw;
+$small-circle-frame-size: 300px;
 
 
 .CirclingIcons {
@@ -37,28 +37,21 @@ $small-circle-size: 120px;
 
 .little-circles {
   padding: 0;
-  --size: 300px;
 
   position: absolute;
 
-  width: var(--size);
-  height: var(--size);
+  width: $small-circle-frame-size;
+  height: $small-circle-frame-size;
   left: 50%;
-  margin-left: calc(-1 / 2 * var(--size));
+  margin-left: calc(-1 / 2 * $small-circle-frame-size);
   top: 50%;
-  margin-top: calc(-1 / 2 * var(--size));
+  margin-top: calc(-1 / 2 * $small-circle-frame-size);
 
   list-style: none;
 }
 
-.little-circles li:first-child {
-  // background-color: orange;
-}
-
 
 .little-circles li {
-  --size: 150px;
-
   /* Optimizations for animation */
   will-change: transform;
   transform-origin: center;
@@ -66,7 +59,6 @@ $small-circle-size: 120px;
   /* Set it to be in the center of bigCircle */
   transform: translate3d(calc($big-circle-size / 2), calc($big-circle-size / 2), 0);
   background-color: variables.$color-moons;
-  font-size: 50px;
   color: black;
   display: block;
   position: absolute;
