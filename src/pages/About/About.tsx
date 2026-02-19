@@ -1,6 +1,6 @@
 import type { RefObject } from "react";
 import "./About.scss";
-import Headshot from "../../assets/photos/headshot-square.png";
+import Headshot from "../../assets/photos/headshot-2026.png";
 
 type Props = {
     sentinelRef: RefObject<HTMLDivElement | null>;
