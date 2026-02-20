@@ -1,0 +1,114 @@
+@use '../../variables';
+
+// CONTAINER
+.circling-icons-intro {
+  height: 100%;
+  display: flex;
+  justify-content: flex-between;
+}
+
+
+// INTRO
+
+.intro {
+    position: absolute;
+    top: 15%;
+    right: 18%;
+}
+
+.title {
+    font-size: 100px;
+}
+
+.subtitle {
+    font-size: 40px;
+    margin-top: -40px;
+}
+
+hr {
+    text-align: center;
+    width: 50vw;
+}
+
+.landing-list {
+    text-decoration: underline;
+    text-align: right;
+}
+
+.landing-list>div {
+    margin-top: 20px;
+}
+
+// CIRCLING ICONS
+
+$big-circle-size: 20cqw;
+$small-circle-size: 8cqw;
+$small-circle-frame-size: 300px;
+
+
+.CirclingIcons {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// .circling-icons-frame {
+//   pointer-events: none;
+//   width: 100vw;
+//   height: 100vh;
+//   position: absolute;
+//   left: 35%;
+//   top: 50%;
+//   margin-left: calc(-1 / 2 * 100vw);
+//   margin-top: calc(-1 / 2 * 100vh);
+//   overflow: hidden;
+// }
+
+.big-circle {
+  z-index: 1;
+  border-radius: 50%;
+  width: $big-circle-size;
+  height: $big-circle-size;
+  // position: absolute;
+  // left: 50%;
+  // top: 50%;
+  // margin-left: calc(-1 / 2 * $big-circle-size);
+  // margin-top: calc(-1 / 2 * $big-circle-size);
+  background-color: variables.$color-planet;
+}
+
+.little-circles {
+  padding: 0;
+  position: absolute;
+  // width: $small-circle-frame-size;
+  // height: $small-circle-frame-size;
+  left: 50%;
+  top: 50%;
+  margin-left: calc(-1 / 2 * $small-circle-frame-size);
+  margin-top: calc(-1 / 2 * $small-circle-frame-size);
+  list-style: none;
+}
+
+
+.little-circles li {
+  /* Optimizations for animation */
+  will-change: transform;
+  transform-origin: center;
+
+  /* Set it to be in the center of bigCircle */
+  transform: translate3d(calc($big-circle-size / 2), calc($big-circle-size / 2), 0);
+  background-color: variables.$color-moons;
+  color: black;
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  width: $small-circle-size;
+  height: $small-circle-size;
+  line-height: $small-circle-size;
+  text-align: center;
+  margin-left: calc(-1 / 2 * $small-circle-size);
+  margin-top: calc(-1 / 2 * $small-circle-size);
+}

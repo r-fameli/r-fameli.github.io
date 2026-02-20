@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './CirclingIcons.scss';
+import './CirclingIconsIntro.scss';
 import { useAnimationFrame } from '../../hooks/useAnimationFrame';
 
 const radians = (degrees: number) => degrees * (Math.PI / 180)
@@ -10,11 +10,11 @@ type Props = {
 
 const CirclingIcons = ({ numCircles }: Props) => {
     // Placing Constants, in pixels and degrees
-    const CENTER = 150;
-    const DIST_TO_CENTER = 350; // Distance to center
-    const ROTATION_OFFSET = 10;
-    const DIST_X_OFFSET = 20;
-    const DIST_Y_OFFSET = -260;
+    const CENTER = 150; // px
+    const DIST_TO_CENTER = 350; // px
+    const ROTATION_OFFSET = 10; // degrees
+    const DIST_X_OFFSET = 20; // px
+    const DIST_Y_OFFSET = -260; // px
     // Velocity Variables
     // velocity units are degrees per second
     const VELOCITY_BASE = 15;
@@ -67,7 +67,6 @@ const CirclingIcons = ({ numCircles }: Props) => {
                         style={{
                             transform: `translate3d(${x}px, ${y}px, 0)`,
                             transition: 'transform 0.1s ease-out',
-                            fontSize: '10px',
                             zIndex: zIndex,
                         }}></li>
                 ))}
