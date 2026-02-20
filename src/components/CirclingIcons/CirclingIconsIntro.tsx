@@ -35,9 +35,7 @@ const CirclingIconsIntro = () => {
                     </a>
                 </div>
             </div>
-
         </div>
-
     </div>
 }
 

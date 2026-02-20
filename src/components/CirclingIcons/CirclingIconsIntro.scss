@@ -4,15 +4,15 @@
 .circling-icons-intro {
   height: 100%;
   display: flex;
-  justify-content: flex-between;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 
 // INTRO
 .intro {
-    position: absolute;
-    top: 15%;
-    right: 18%;
+  line-height: 1.7;
+
 }
 
 .title {
@@ -32,21 +32,19 @@ hr {
 .landing-list {
     text-decoration: underline;
     text-align: right;
-}
-
-.landing-list>div {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    gap: 1.5rem;
 }
 
 // CIRCLING ICONS
-$big-circle-size: 20cqw;
+$big-circle-size: 18cqw;
 $small-circle-size: 8cqw;
 $small-circle-frame-size: 40cqw;
 
 
 .CirclingIcons {
-  height: 100%;
-  width: 100%;
   position: relative;
   display: flex;
   justify-content: center;
