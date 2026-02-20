@@ -9,7 +9,6 @@
 
 
 // INTRO
-
 .intro {
     position: absolute;
     top: 15%;
@@ -40,10 +39,9 @@ hr {
 }
 
 // CIRCLING ICONS
-
 $big-circle-size: 20cqw;
 $small-circle-size: 8cqw;
-$small-circle-frame-size: 300px;
+$small-circle-frame-size: 40cqw;
 
 
 .CirclingIcons {
@@ -55,36 +53,17 @@ $small-circle-frame-size: 300px;
   align-items: center;
 }
 
-// .circling-icons-frame {
-//   pointer-events: none;
-//   width: 100vw;
-//   height: 100vh;
-//   position: absolute;
-//   left: 35%;
-//   top: 50%;
-//   margin-left: calc(-1 / 2 * 100vw);
-//   margin-top: calc(-1 / 2 * 100vh);
-//   overflow: hidden;
-// }
-
 .big-circle {
   z-index: 1;
   border-radius: 50%;
   width: $big-circle-size;
   height: $big-circle-size;
-  // position: absolute;
-  // left: 50%;
-  // top: 50%;
-  // margin-left: calc(-1 / 2 * $big-circle-size);
-  // margin-top: calc(-1 / 2 * $big-circle-size);
   background-color: variables.$color-planet;
 }
 
 .little-circles {
   padding: 0;
   position: absolute;
-  // width: $small-circle-frame-size;
-  // height: $small-circle-frame-size;
   left: 50%;
   top: 50%;
   margin-left: calc(-1 / 2 * $small-circle-frame-size);

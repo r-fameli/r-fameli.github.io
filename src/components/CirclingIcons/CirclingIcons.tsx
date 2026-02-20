@@ -9,12 +9,12 @@ type Props = {
 }
 
 const CirclingIcons = ({ numCircles }: Props) => {
-    // Placing Constants, in pixels and degrees
-    const CENTER = 150; // px
-    const DIST_TO_CENTER = 350; // px
+    // Placing Constants, in cqw and degrees
+    const CENTER = 20; // cqw
+    const DIST_TO_CENTER = 15; // cqw
     const ROTATION_OFFSET = 10; // degrees
-    const DIST_X_OFFSET = 20; // px
-    const DIST_Y_OFFSET = -260; // px
+    const DIST_X_OFFSET = 3; // cqw
+    const DIST_Y_OFFSET = -12; // cqw
     // Velocity Variables
     // velocity units are degrees per second
     const VELOCITY_BASE = 15;
@@ -65,7 +65,8 @@ const CirclingIcons = ({ numCircles }: Props) => {
                     <li
                         key={i}
                         style={{
-                            transform: `translate3d(${x}px, ${y}px, 0)`,
+                            // transform: `translate3d(${x}px, ${y}px, 0)`,
+                            transform: `translate3d(${x}cqw, ${y}cqw, 0)`,
                             transition: 'transform 0.1s ease-out',
                             zIndex: zIndex,
                         }}></li>
