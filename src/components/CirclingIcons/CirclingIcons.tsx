@@ -39,7 +39,7 @@ const CirclingIcons = ({ numCircles }: Props) => {
             const x = CENTER + (xBeforeRot * cosRot - yBeforeRot * sinRot);
             const y = CENTER + (xBeforeRot * sinRot + yBeforeRot * cosRot);
             // z-index
-            const z = angle < 180 ? 5 : 0;
+            const z = angle < 180 ? 5 : -1;
             positions[i] = [x, y, z]
         };
         return positions
