@@ -41,19 +41,33 @@ a {
 }
 
 // Font sizes
+.title {
+    font-size: clamp(7rem, 3vw, 12rem);
+    line-height: 0.8;
+}
+
+.subtitle {
+    font-size: clamp(3rem, 2.5vw, 6rem);
+}
+
+
 h1 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: lighter;
 }
 
 h2 {
-    font-size: 1.1rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
 }
 
 h3 {
-    font-size: 0.9rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
 }
 
 .nav-font {
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+}
+
+body {
+    font-size: clamp(1rem, 1vw, 1.1rem);
 }

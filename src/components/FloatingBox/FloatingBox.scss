@@ -29,4 +29,6 @@
 
 .FloatingBox-title {
     color: variables.$color-accent;
+    display: flex;
+    flex-wrap: wrap;
 }

@@ -5,21 +5,13 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
 // INTRO
 .intro {
     line-height: 1.7;
-}
-
-.title {
-    font-size: 100px;
-}
-
-.subtitle {
-    font-size: 40px;
-    margin-top: -40px;
 }
 
 hr {
@@ -48,13 +40,14 @@ hr {
 $big-circle-size: 18cqw;
 $small-circle-size: 8cqw;
 $small-circle-frame-size: 40cqw;
+$circles-top-padding: 15cqh;
 
 .CirclingIcons {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 8cqh;
+    padding-top: $circles-top-padding;
 }
 
 .big-circle {
@@ -67,7 +60,7 @@ $small-circle-frame-size: 40cqw;
 
 .little-circles {
     padding: 0;
-    padding-top: 4cqh;
+    padding-top: calc($circles-top-padding / 2);
     position: absolute;
     left: 50%;
     top: 50%;
