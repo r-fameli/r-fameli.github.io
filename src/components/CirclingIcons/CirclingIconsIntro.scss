@@ -1,18 +1,16 @@
-@use '../../variables';
+@use "../../variables";
 
 // CONTAINER
 .circling-icons-intro {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-
 
 // INTRO
 .intro {
-  line-height: 1.7;
-
+    line-height: 1.7;
 }
 
 .title {
@@ -31,11 +29,19 @@ hr {
 
 .landing-list {
     text-decoration: underline;
-    text-align: right;
+    text-align: right !important;
     display: flex;
-    flex-direction: column;
     margin-top: 1.5rem;
     gap: 1.5rem;
+}
+
+.row-lst {
+    flex-direction: row;
+    justify-content: space-around
+}
+
+.col-lst {
+    flex-direction: column;
 }
 
 // CIRCLING ICONS
@@ -43,49 +49,51 @@ $big-circle-size: 18cqw;
 $small-circle-size: 8cqw;
 $small-circle-frame-size: 40cqw;
 
-
 .CirclingIcons {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .big-circle {
-  z-index: 1;
-  border-radius: 50%;
-  width: $big-circle-size;
-  height: $big-circle-size;
-  background-color: variables.$color-planet;
+    z-index: 1;
+    border-radius: 50%;
+    width: $big-circle-size;
+    height: $big-circle-size;
+    background-color: variables.$color-planet;
 }
 
 .little-circles {
-  padding: 0;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: calc(-1 / 2 * $small-circle-frame-size);
-  margin-top: calc(-1 / 2 * $small-circle-frame-size);
-  list-style: none;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: calc(-1 / 2 * $small-circle-frame-size);
+    margin-top: calc(-1 / 2 * $small-circle-frame-size);
+    list-style: none;
 }
 
-
 .little-circles li {
-  /* Optimizations for animation */
-  will-change: transform;
-  transform-origin: center;
+    /* Optimizations for animation */
+    will-change: transform;
+    transform-origin: center;
 
-  /* Set it to be in the center of bigCircle */
-  transform: translate3d(calc($big-circle-size / 2), calc($big-circle-size / 2), 0);
-  background-color: variables.$color-moons;
-  color: black;
-  display: block;
-  position: absolute;
-  border-radius: 50%;
-  width: $small-circle-size;
-  height: $small-circle-size;
-  line-height: $small-circle-size;
-  text-align: center;
-  margin-left: calc(-1 / 2 * $small-circle-size);
-  margin-top: calc(-1 / 2 * $small-circle-size);
+    /* Set it to be in the center of bigCircle */
+    transform: translate3d(
+        calc($big-circle-size / 2),
+        calc($big-circle-size / 2),
+        0
+    );
+    background-color: variables.$color-moons;
+    color: black;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    width: $small-circle-size;
+    height: $small-circle-size;
+    line-height: $small-circle-size;
+    text-align: center;
+    margin-left: calc(-1 / 2 * $small-circle-size);
+    margin-top: calc(-1 / 2 * $small-circle-size);
 }
