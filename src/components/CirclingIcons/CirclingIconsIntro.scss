@@ -54,6 +54,7 @@ $small-circle-frame-size: 40cqw;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 8cqh;
 }
 
 .big-circle {
@@ -66,6 +67,7 @@ $small-circle-frame-size: 40cqw;
 
 .little-circles {
     padding: 0;
+    padding-top: 4cqh;
     position: absolute;
     left: 50%;
     top: 50%;
