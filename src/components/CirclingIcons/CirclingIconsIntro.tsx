@@ -16,12 +16,16 @@ const CirclingIconsIntro = () => {
             // Detect if wrap is happening by using the offsetTops of each child
             const children = container.children;
             let tempIsWrapping = false;
-            const firstChildTop = (children[0] as HTMLElement).offsetTop;
-            for (let i = 0; i < children.length; i++) {
+            const firstChild = children[0] as HTMLElement;
+            const firstCenter = firstChild.offsetTop + (firstChild.offsetHeight / 2);
+            for (let i = 1; i < children.length; i++) {
                 const child = children[i] as HTMLElement;
-                if (child.offsetTop != firstChildTop) {
+                const center = child.offsetTop + (child.offsetHeight / 2);
+                // Even though centers are supposed to be aligned, they don't align pixel-perfect
+                if (Math.abs(firstCenter - center) > 10) {
                     tempIsWrapping = true;
                 }
+                console.log("centers", firstCenter, center);
             }
             console.log("Wrapping:", tempIsWrapping);
             setIsWrapping(tempIsWrapping);
