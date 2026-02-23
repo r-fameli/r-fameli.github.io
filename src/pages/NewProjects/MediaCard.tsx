@@ -9,20 +9,10 @@ type Props = {
 
 const MediaCard = ({ id, type, source }: Props) => {
     const vidRef = useRef<HTMLVideoElement>(null);
-
-    const handleMouseEnter = () => {
-        vidRef.current!.pause();
-    };
-    
-    const handleMouseLeave = () => {
-        vidRef.current!.play();
-    };
     return (
         <div
             className="media-card"
             id={`media-${id}`}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
         >
             {type == "video" ? (
                 <video ref={vidRef} muted loop src={source} autoPlay />
