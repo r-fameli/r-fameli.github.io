@@ -64,11 +64,11 @@ h2 {
 }
 
 h3 {
-    font-size: 2vmin;
+    font-size: 2vmax;
 }
 
 .nav-font {
-    font-size: 2vw;
+    font-size: min(2vmax, 1rem);
 }
 
 body {

@@ -25,15 +25,15 @@ hr {
     display: flex;
     margin-top: 1.5rem;
     gap: 1.5rem;
+    flex-direction: column; // switches to row once wrapped
 }
 
-.row-lst {
-    flex-direction: row;
-    justify-content: space-around
-}
-
-.col-lst {
-    flex-direction: column;
+// ON FLEX-WRAP
+.wrapped-intro {
+    .landing-list {
+        flex-direction: row !important;
+        justify-content: space-around;
+    }
 }
 
 // CIRCLING ICONS
@@ -66,8 +66,19 @@ $circles-top-padding: 15cqh;
     top: 50%;
     margin-left: calc(-1 / 2 * $small-circle-frame-size);
     margin-top: calc(-1 / 2 * $small-circle-frame-size);
-    list-style: none;
 }
+
+// If intro is wrapped, remove top padding
+.wrapped-intro {
+    .CirclingIcons {
+        padding-top: 0;
+    }
+
+    .little-circles {
+        padding-top: 0;
+    }
+}
+
 
 .little-circles li {
     /* Optimizations for animation */

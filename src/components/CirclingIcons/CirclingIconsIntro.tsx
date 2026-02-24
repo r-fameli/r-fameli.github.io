@@ -36,14 +36,14 @@ const CirclingIconsIntro = () => {
     }, []);
 
     return (
-        <div className="circling-icons-intro" ref={containerRef}>
+        <div className={`circling-icons-intro ${isWrapping ? 'wrapped-intro' : ''}`} ref={containerRef}>
             <CirclingIcons numCircles={8} />
             <div className={"intro"}>
                 <div className="text-center title">Riki Fameli</div>
                 <div className="text-center subtitle">
                     full stack software engineer
                 </div>
-                <div className={`landing-list nav-font ${isWrapping ? 'row-lst' : 'col-lst'}`}>
+                <div className={'landing-list nav-font'}>
                     <div>
                         <a href={Resume} target="_blank">
                             resume
