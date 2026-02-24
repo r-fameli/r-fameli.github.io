@@ -41,33 +41,36 @@ a {
 }
 
 // Font sizes
+
+// Title and subtitle font sizes should maintain a ratio of 28 : 11
 .title {
-    font-size: clamp(7rem, 3vw, 12rem);
+    font-size: max(0.2vw * 28, 0.1rem * 28);
+    // font-size: clamp(7rem, 3vw, 12rem);
     line-height: 0.8;
 }
 
 .subtitle {
-    font-size: clamp(3rem, 2.5vw, 6rem);
+    // font-size: clamp(3rem, 2.5vw, 6rem);
+    font-size: max(0.2vw * 11, 0.1rem * 11);
 }
 
 
 h1 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: lighter;
+    font-size: 3vw;
 }
 
 h2 {
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-size: 2vmin;
 }
 
 h3 {
-    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    font-size: 2vmin;
 }
 
 .nav-font {
-    font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+    font-size: 2vw;
 }
 
 body {
-    font-size: clamp(1rem, 1vw, 1.1rem);
+    font-size: 1.8vmin;
 }

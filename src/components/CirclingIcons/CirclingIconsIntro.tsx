@@ -25,9 +25,7 @@ const CirclingIconsIntro = () => {
                 if (Math.abs(firstCenter - center) > 10) {
                     tempIsWrapping = true;
                 }
-                console.log("centers", firstCenter, center);
             }
-            console.log("Wrapping:", tempIsWrapping);
             setIsWrapping(tempIsWrapping);
         });
         if (container) {
