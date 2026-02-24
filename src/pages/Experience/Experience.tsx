@@ -62,25 +62,25 @@ const Experience = ({ sentinelRef }: Props) => {
                 <FloatingBox
                     title={"Microsoft, Azure Storage"}
                     subtitle={"Software Engineer"}
-                    datesString={"Aug 2023 - Sept 2025"}
+                    datesString={"Aug '23 - Sept '25"}
                     content={msftContent}
                 />
                 <FloatingBox
                     title={"Microsoft, Azure Storage"}
                     subtitle={"Software Engineering Intern"}
-                    datesString={"Jun 2022 - Sep 2022"}
+                    datesString={"Jun '22 - Sep '22"}
                     content={msftInternContent}
                 />
                 <FloatingBox
                     title={"Brown University Dept. of Computer Science"}
                     subtitle={"Undergraduate Teaching Assistant"}
-                    datesString={"Jun 2021 - Dec 2023"}
+                    datesString={"Jun '21 - Dec '23"}
                     content={brownTAContent}
                 />
                 <FloatingBox
                     title={"Brown University Center for Computation"}
                     subtitle={"User Services Intern"}
-                    datesString={"Feb 2021 - Aug 2021"}
+                    datesString={"Feb '21 - Aug '21"}
                     content={ccvDescription}
                 />
             </div>
