@@ -15,9 +15,9 @@ const MediaCard = ({ id, type, source }: Props) => {
             id={`media-${id}`}
         >
             {type == "video" ? (
-                <video ref={vidRef} muted loop src={source} autoPlay />
+                <video ref={vidRef} muted loop src={source} autoPlay playsInline />
             ) : (
-                <img src={source}></img>
+                <img src={source}/>
             )}
         </div>
     );
