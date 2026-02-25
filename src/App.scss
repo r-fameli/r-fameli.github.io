@@ -56,21 +56,21 @@ a {
 
 
 h1 {
-    font-size: 3vw;
+    font-size: min(3vw, 7rem);
 }
 
 h2 {
-    font-size: 2vmin;
+    font-size: min(2vmin, 5rem);
 }
 
 h3 {
-    font-size: 2vmax;
+    font-size: min(2vmax, 2.5rem);
 }
 
 .nav-font {
-    font-size: min(2vmax, 1rem);
+    font-size: min(2vmax, 3rem);
 }
 
 body {
-    font-size: 1.8vmin;
+    font-size: min(1.8vmin, 2rem);
 }
