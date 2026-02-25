@@ -12,9 +12,9 @@ const About = ({ sentinelRef }: Props) => {
             <div className="about-container">
                 <div className="about-row">
                     <img className="about-image" src={Headshot} />
-                    <div>
+                    <span className="about-text">
                         <h1>about me</h1>
-                        <p className="about-text">
+                        <p>
                             Hi, I'm Riki! I'm a full-stack developer who
                             previously worked at Microsoft and a Brown
                             University alumnus. Much of my experience is in web
@@ -24,7 +24,7 @@ const About = ({ sentinelRef }: Props) => {
                             experience, human rights in the 21st century, and
                             work that challenges me to learn quickly.
                         </p>
-                    </div>
+                    </span>
                 </div>
             </div>
         </div>

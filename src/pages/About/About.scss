@@ -16,26 +16,22 @@
 }
 
 .about-row {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 5%;
+    width: 100%;
 }
 
 .about-image {
-    max-height: 37vh;
+    float: left;
+    width: 20vw;
     border-radius: 10%;
     border: 2px solid variables.$color-accent2;
     transition: box-shadow 0.7s, transform 1s;
+    margin-right: 2vmin;
+    margin-bottom: 4px;
 }
 
 .about-image:hover {
     box-shadow: 5px 10px variables.$color-accent;
     transform: translate(-3px, -10px);
-}
-
-.about-text {
-    width: 35vw;
 }
 
 @media (max-width: 768px) {
