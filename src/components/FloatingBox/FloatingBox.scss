@@ -22,9 +22,14 @@
     justify-content: space-between;
 }
 
+.FloatingBox-titling {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .FloatingBox-titling>h2 {
-    display: inline;
     margin-right: 10px;
+    text-wrap: nowrap;
 }
 
 .FloatingBox-title {
