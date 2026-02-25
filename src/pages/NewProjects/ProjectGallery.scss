@@ -74,14 +74,11 @@
     justify-content: flex-end;
     align-items: flex-end;
     overflow: hidden;
-    // height: 100%; /* This makes it fill the available height */
-    // max-height: 30vh; /* Additional safety constraint */
 }
 
 .media-card video,
 img {
     object-fit: contain;
-    // width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
