@@ -7,7 +7,7 @@
 }
 
 .gallery-row {
-    height: 70vh;
+    min-height: 80vh;
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
@@ -17,7 +17,6 @@
 }
 
 .gallery-item {
-    height: 45vh;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -45,14 +44,6 @@
     width: 100%;
 }
 
-.row-spacer {
-    height: 10vh;
-}
-
-.row-spacer-big {
-    height: 25vh;
-}
-
 .vertical-item-layout {
     height: 80%;
 }
@@ -78,6 +69,7 @@
 
 .media-card video,
 img {
+    max-height: 40vh;
     object-fit: contain;
     height: 100%;
     display: flex;
@@ -87,12 +79,12 @@ img {
 
 .gallery-description {
     margin-top: 0.5rem;
-    width: 70%;
+    width: 80%;
     text-align: left;
 }
 
 .tag-group {
-    width: 70%;
+    width: 80%;
     padding-top: 10px;
     display: flex;
     justify-content: flex-start;
