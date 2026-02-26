@@ -4,7 +4,7 @@ import TronDemo from "../../assets/videos/tron-demo.mp4";
 import JournalTexterDemo from "../../assets/videos/journaltexter-demo.mp4";
 import VisualTransformersDemo from "../../assets/images/visual-transformers-poster.jpg";
 import MediaCard from "./MediaCard";
-import { journalTexterDescription, sockyDescription, tronDescription, visualTransformersDescription } from "./ProjectDescriptions";
+import { journalTexterDescription, newPortfolioDescription, oldPortfolioDescription, sockyDescription, tronDescription, visualTransformersDescription } from "./ProjectDescriptions";
 
 type GalleryItemDetails = {
     id: number;
@@ -110,10 +110,27 @@ const ProjectGallery = () => {
         tags: ['python', 'numpy', 'tensorflow', 'keras']
     };
 
+    const oldPortfolioItem: GalleryItemDetails = {
+        id: 5,
+        type: 'video',
+        caption: 'portfolio (2021)',
+        description: oldPortfolioDescription,
+        tags: ['react', 'figma', 'styled-components']
+    }
+
+    const newPortfolioItem: GalleryItemDetails = {
+        id: 6,
+        type: 'video',
+        caption: 'portfolio (2026)',
+        description: newPortfolioDescription,
+        tags: ['react', 'figma', 'scss']
+    }
+
     return (
         <div className="video-gallery">
             <GalleryRow item1={sockyItem} item2={tronItem} />
             <GalleryRow item1={jtItem} item2={vtItem} />
+            <GalleryRow item1={oldPortfolioItem} item2={newPortfolioItem} />
         </div>
     );
 };

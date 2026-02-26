@@ -20,7 +20,23 @@ export const journalTexterDescription = (
 export const visualTransformersDescription = (
     <div>
         created an image detection model using visual transformers rather than
-        the typical convolutional neural networks, to moderate success. built
-        using python / keras
+        the typical convolutional neural networks, to moderate success.
     </div>
 );
+
+export const oldPortfolioDescription = (
+    <div>
+        my first ever portfolio, in which I taught myself much of my current React foundations. no 
+        component libraries. lots of learnings around visual design, responsiveness and styling in CSS.
+        <br/>
+        (video to be added soon)
+    </div>
+)
+
+export const newPortfolioDescription = (
+    <div>
+        what you're looking at right now! a 2025/26 revamp of my original portfolio. again, no component 
+        libraries. this time, more focus on responsiveness without using media queries, experimenting 
+        with new ideas to better display information, and some light CSS animation.
+    </div>
+)
