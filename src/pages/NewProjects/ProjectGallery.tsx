@@ -9,9 +9,12 @@ import { journalTexterDescription, sockyDescription, tronDescription, visualTran
 type GalleryItemDetails = {
     id: number;
     type: "video" | "img";
-    source: string;
+    source?: string;
     caption: string;
     description: React.ReactNode;
+    tags?: string[];
+    repoLink?: string;
+    deployedLink?: string;
 };
 
 type RowProps = {
@@ -25,30 +28,44 @@ const GalleryRow = ({ item1, item2 }: RowProps) => {
             <div className="flex-col-start">
                 {item1 && (
                     <div className="gallery-item">
-                        <MediaCard
-                            id={item1.id}
-                            source={item1.source}
-                            type={item1.type}
-                        />
+                        {item1.source && (
+                            <MediaCard
+                                id={item1.id}
+                                source={item1.source}
+                                type={item1.type}
+                            />
+                        )}
                         <h3>{item1.caption}</h3>
                         <div className="gallery-description">
                             {item1.description}
                         </div>
+                        {item1.tags && <div className="tag-group">
+                            {item1.tags.map((tag) => (
+                                <span className="tech-tag">{tag}</span>
+                            ))}
+                        </div>}
                     </div>
                 )}
             </div>
             <div className="flex-col-end">
                 {item2 && (
                     <div className="gallery-item">
-                        <MediaCard
-                            id={item2.id}
-                            source={item2.source}
-                            type={item2.type}
-                        />
+                        {item2.source && (
+                            <MediaCard
+                                id={item2.id}
+                                source={item2.source}
+                                type={item2.type}
+                            />
+                        )}
                         <h3>{item2.caption}</h3>
                         <div className="gallery-description">
                             {item2.description}
                         </div>
+                        {item2.tags && <div className="tag-group">
+                            {item2.tags.map((tag) => (
+                                <span className="tech-tag">{tag}</span>
+                            ))}
+                        </div>}
                     </div>
                 )}
             </div>
@@ -62,7 +79,8 @@ const ProjectGallery = () => {
         type: "video",
         source: SockyDemo,
         caption: "socky",
-        description: sockyDescription
+        description: sockyDescription,
+        tags: ['python', 'pygame', 'löve']
     };
 
     const tronItem: GalleryItemDetails = {
@@ -70,7 +88,8 @@ const ProjectGallery = () => {
         type: "video",
         source: TronDemo,
         caption: "tron bot",
-        description: tronDescription
+        description: tronDescription,
+        tags: ['python', 'numpy']
     };
 
     const jtItem: GalleryItemDetails = {
@@ -78,7 +97,8 @@ const ProjectGallery = () => {
         type: "video",
         source: JournalTexterDemo,
         caption: "journaltexter",
-        description: journalTexterDescription
+        description: journalTexterDescription,
+        tags: ['java', 'spark', 'react', 'sqlite']
     };
 
     const vtItem: GalleryItemDetails = {
@@ -86,7 +106,8 @@ const ProjectGallery = () => {
         type: "img",
         source: VisualTransformersDemo,
         caption: "visual transformers",
-        description: visualTransformersDescription
+        description: visualTransformersDescription,
+        tags: ['python', 'numpy', 'tensorflow', 'keras']
     };
 
     return (

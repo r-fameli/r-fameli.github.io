@@ -90,3 +90,20 @@ img {
     width: 70%;
     text-align: left;
 }
+
+.tag-group {
+    width: 70%;
+    padding-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1vw;
+    flex-wrap: wrap;
+}
+
+.tech-tag {
+    border-radius: 5%;
+    background-color: variables.$color-accent2;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: black;
+}
