@@ -1,6 +1,5 @@
 @use "variables";
 
-
 body {
     background-color: variables.$color-main;
     color: variables.$color-text;
@@ -54,23 +53,23 @@ a {
     font-size: max(0.2vw * 11, 0.1rem * 11);
 }
 
-
 h1 {
-    font-size: min(3vw, 7rem);
+    font-size: clamp(2rem, 1.5rem + 1.2vw, 3rem);
+    font-weight: lighter;
 }
 
 h2 {
-    font-size: min(2vmin, 5rem);
+    font-size: clamp(1.5rem, 1.3rem + 1.1vw, 1.7rem);
 }
 
 h3 {
-    font-size: min(2vmax, 2.5rem);
+    font-size: clamp(1.3rem, 1.1rem + 1.1vw, 1.5rem);
 }
 
 .nav-font {
-    font-size: min(2vmax, 3rem);
+    font-size: clamp(1.5rem, 2.5vw, 1.8rem);
 }
 
 body {
-    font-size: min(1.8vmin, 2rem);
+    font-size: clamp(1.2rem, 1rem + 1vw, 1.3rem);
 }
