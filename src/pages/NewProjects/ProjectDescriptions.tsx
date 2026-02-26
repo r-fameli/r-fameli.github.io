@@ -5,7 +5,7 @@ export const sockyDescription = (
 export const tronDescription = (
     <div>
         a tron algorithm implemented in python with a partner using an
-        alpha-beta algorithm and a Voronoi heuristic. achieved a win rate abouve
+        alpha-beta algorithm and a Voronoi heuristic. achieved a win rate above
         70% against a similar, provided bot
     </div>
 );
