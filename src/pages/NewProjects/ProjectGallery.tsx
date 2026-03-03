@@ -4,7 +4,14 @@ import TronDemo from "../../assets/videos/tron-demo.mp4";
 import JournalTexterDemo from "../../assets/videos/journaltexter-demo.mp4";
 import VisualTransformersDemo from "../../assets/images/visual-transformers-poster.jpg";
 import MediaCard from "./MediaCard";
-import { journalTexterDescription, newPortfolioDescription, oldPortfolioDescription, sockyDescription, tronDescription, visualTransformersDescription } from "./ProjectDescriptions";
+import {
+    journalTexterDescription,
+    newPortfolioDescription,
+    oldPortfolioDescription,
+    sockyDescription,
+    tronDescription,
+    visualTransformersDescription,
+} from "./ProjectDescriptions";
 
 type GalleryItemDetails = {
     id: number;
@@ -39,11 +46,13 @@ const GalleryRow = ({ item1, item2 }: RowProps) => {
                         <div className="gallery-description">
                             {item1.description}
                         </div>
-                        {item1.tags && <div className="tag-group">
-                            {item1.tags.map((tag) => (
-                                <span className="tech-tag">{tag}</span>
-                            ))}
-                        </div>}
+                        {item1.tags && (
+                            <div className="tag-group">
+                                {item1.tags.map((tag) => (
+                                    <span className="tech-tag">{tag}</span>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 )}
             </div>
@@ -61,11 +70,13 @@ const GalleryRow = ({ item1, item2 }: RowProps) => {
                         <div className="gallery-description">
                             {item2.description}
                         </div>
-                        {item2.tags && <div className="tag-group">
-                            {item2.tags.map((tag) => (
-                                <span className="tech-tag">{tag}</span>
-                            ))}
-                        </div>}
+                        {item2.tags && (
+                            <div className="tag-group">
+                                {item2.tags.map((tag) => (
+                                    <span className="tech-tag">{tag}</span>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 )}
             </div>
@@ -80,7 +91,7 @@ const ProjectGallery = () => {
         source: SockyDemo,
         caption: "socky",
         description: sockyDescription,
-        tags: ['python', 'pygame', 'löve']
+        tags: ["python", "pygame", "löve"],
     };
 
     const tronItem: GalleryItemDetails = {
@@ -89,7 +100,7 @@ const ProjectGallery = () => {
         source: TronDemo,
         caption: "tron bot",
         description: tronDescription,
-        tags: ['python', 'numpy']
+        tags: ["python", "numpy"],
     };
 
     const jtItem: GalleryItemDetails = {
@@ -98,7 +109,7 @@ const ProjectGallery = () => {
         source: JournalTexterDemo,
         caption: "journaltexter",
         description: journalTexterDescription,
-        tags: ['java', 'spark', 'react', 'sqlite']
+        tags: ["java", "spark", "react", "sqlite"],
     };
 
     const vtItem: GalleryItemDetails = {
@@ -107,24 +118,24 @@ const ProjectGallery = () => {
         source: VisualTransformersDemo,
         caption: "visual transformers",
         description: visualTransformersDescription,
-        tags: ['python', 'numpy', 'tensorflow', 'keras']
+        tags: ["python", "numpy", "tensorflow", "keras"],
     };
 
     const oldPortfolioItem: GalleryItemDetails = {
         id: 5,
-        type: 'video',
-        caption: 'portfolio (2021)',
+        type: "video",
+        caption: "portfolio (2021)",
         description: oldPortfolioDescription,
-        tags: ['react', 'figma', 'styled-components']
-    }
+        tags: ["react", "figma", "styled-components"],
+    };
 
     const newPortfolioItem: GalleryItemDetails = {
         id: 6,
-        type: 'video',
-        caption: 'portfolio (2026)',
+        type: "video",
+        caption: "portfolio (2026)",
         description: newPortfolioDescription,
-        tags: ['react', 'figma', 'scss']
-    }
+        tags: ["react", "figma", "scss"],
+    };
 
     return (
         <div className="video-gallery">
