@@ -1,10 +1,11 @@
-import "./ProjectGallery.scss";
+import VisualTransformersDemo from "../../assets/images/visual-transformers-poster.jpg";
+import JournalTexterDemo from "../../assets/videos/journaltexter-demo.mp4";
 import SockyDemo from "../../assets/videos/socky-demo.mp4";
 import TronDemo from "../../assets/videos/tron-demo.mp4";
-import JournalTexterDemo from "../../assets/videos/journaltexter-demo.mp4";
-import VisualTransformersDemo from "../../assets/images/visual-transformers-poster.jpg";
 import MediaCard from "./MediaCard";
+import CCVScriptDemo from '../../assets/videos/ccv-script-demo.mp4';
 import {
+    ccvScriptDescription,
     journalTexterDescription,
     newPortfolioDescription,
     oldPortfolioDescription,
@@ -12,6 +13,7 @@ import {
     tronDescription,
     visualTransformersDescription,
 } from "./ProjectDescriptions";
+import "./ProjectGallery.scss";
 
 type GalleryItemDetails = {
     id: number;
@@ -137,11 +139,21 @@ const ProjectGallery = () => {
         tags: ["react", "figma", "scss"],
     };
 
+    const ccvScriptItem: GalleryItemDetails = {
+        id: 7,
+        type: "video",
+        source: CCVScriptDemo,
+        caption: "ccv account creation script",
+        description: ccvScriptDescription,
+        tags: ["selenium", "python"],
+    };
+
     return (
         <div className="video-gallery">
             <GalleryRow item1={sockyItem} item2={tronItem} />
             <GalleryRow item1={jtItem} item2={vtItem} />
-            <GalleryRow item1={oldPortfolioItem} item2={newPortfolioItem} />
+            <GalleryRow item1={ccvScriptItem} item2={oldPortfolioItem} />
+            <GalleryRow item1={undefined} item2={newPortfolioItem} />
         </div>
     );
 };

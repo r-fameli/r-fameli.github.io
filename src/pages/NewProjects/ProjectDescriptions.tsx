@@ -26,17 +26,28 @@ export const visualTransformersDescription = (
 
 export const oldPortfolioDescription = (
     <div>
-        my first ever portfolio, in which I taught myself much of my current React foundations. no 
-        component libraries. lots of learnings around visual design, responsiveness and styling in CSS.
-        <br/>
+        my first ever portfolio, in which I taught myself much of my current
+        React foundations. no component libraries. lots of learnings around
+        visual design, responsiveness and styling in CSS.
+        <br />
         (video to be added soon)
     </div>
-)
+);
 
 export const newPortfolioDescription = (
     <div>
-        what you're looking at right now! a 2025/26 revamp of my original portfolio. again, no component 
-        libraries. this time, more focus on responsiveness without using media queries, experimenting 
-        with new ideas to better display information, and some light CSS animation.
+        what you're looking at right now! a 2025/26 revamp of my original
+        portfolio. again, no component libraries. this time, more focus on
+        responsiveness without using media queries, experimenting with new ideas
+        to better display information, and some light CSS animation.
     </div>
-)
+);
+
+export const ccvScriptDescription = (
+    <div>
+        a python script using selenium webdriver to automatically go through
+        various web interfaces and assign user privileges. used to make my job
+        at brown's center for computation a little easier while learning about
+        some basic UI testing.
+    </div>
+);
