@@ -28,19 +28,21 @@ hr {
     flex-direction: column; // switches to row once wrapped
 }
 
+// CIRCLING ICONS
+$big-circle-size: 18cqw;
+$small-circle-size: 8cqw;
+$small-circle-frame-size: 40cqw;
+$circles-top-padding: 15cqh;
+
 // ON FLEX-WRAP
 .wrapped-intro {
     .landing-list {
         flex-direction: row !important;
         justify-content: space-around;
     }
+    $circles-top-padding: calc(90cqh - $big-circle-size);
 }
 
-// CIRCLING ICONS
-$big-circle-size: 18cqw;
-$small-circle-size: 8cqw;
-$small-circle-frame-size: 40cqw;
-$circles-top-padding: 15cqh;
 
 .CirclingIcons {
     position: relative;
@@ -67,18 +69,6 @@ $circles-top-padding: 15cqh;
     margin-left: calc(-1 / 2 * $small-circle-frame-size);
     margin-top: calc(-1 / 2 * $small-circle-frame-size);
 }
-
-// If intro is wrapped, remove top padding
-.wrapped-intro {
-    .CirclingIcons {
-        padding-top: 0;
-    }
-
-    .little-circles {
-        padding-top: 0;
-    }
-}
-
 
 .little-circles li {
     /* Optimizations for animation */
