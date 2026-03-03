@@ -85,16 +85,28 @@ img {
 
 .tag-group {
     width: 80%;
-    padding-top: 10px;
+    padding-top: max(10px, 1vh);
     display: flex;
     justify-content: flex-start;
     gap: 1vw;
     flex-wrap: wrap;
 }
 
+.tag-group a {
+    text-decoration: none;
+}
+
 .tech-tag {
     border-radius: 5%;
     background-color: variables.$color-accent2;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: black;
+}
+
+.link-tag {
+    background-color: variables.$color-accent;
+    border-radius: 5%;
     padding-left: 1rem;
     padding-right: 1rem;
     color: black;

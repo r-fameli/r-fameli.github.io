@@ -3,7 +3,7 @@ import JournalTexterDemo from "../../assets/videos/journaltexter-demo.mp4";
 import SockyDemo from "../../assets/videos/socky-demo.mp4";
 import TronDemo from "../../assets/videos/tron-demo.mp4";
 import MediaCard from "./MediaCard";
-import CCVScriptDemo from '../../assets/videos/ccv-script-demo.mp4';
+import CCVScriptDemo from "../../assets/videos/ccv-script-demo.mp4";
 import {
     ccvScriptDescription,
     journalTexterDescription,
@@ -15,6 +15,11 @@ import {
 } from "./ProjectDescriptions";
 import "./ProjectGallery.scss";
 
+type LabeledItem = {
+    label: string;
+    value: string;
+};
+
 type GalleryItemDetails = {
     id: number;
     type: "video" | "img";
@@ -22,8 +27,7 @@ type GalleryItemDetails = {
     caption: string;
     description: React.ReactNode;
     tags?: string[];
-    repoLink?: string;
-    deployedLink?: string;
+    links?: LabeledItem[];
 };
 
 type RowProps = {
@@ -55,6 +59,17 @@ const GalleryRow = ({ item1, item2 }: RowProps) => {
                                 ))}
                             </div>
                         )}
+                        {item1.links && (
+                            <div className="tag-group">
+                                {item1.links.map(({ label, value }) => (
+                                    <a href={value} target="_blank">
+                                        <span className="link-tag">
+                                            {label}
+                                        </span>
+                                    </a>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 )}
             </div>
@@ -79,6 +94,17 @@ const GalleryRow = ({ item1, item2 }: RowProps) => {
                                 ))}
                             </div>
                         )}
+                        {item2.links && (
+                            <div className="tag-group">
+                                {item2.links.map(({ label, value }) => (
+                                    <a href={value} target="_blank">
+                                        <span className="link-tag">
+                                            {label}
+                                        </span>
+                                    </a>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 )}
             </div>
@@ -94,6 +120,7 @@ const ProjectGallery = () => {
         caption: "socky",
         description: sockyDescription,
         tags: ["python", "pygame", "löve"],
+        links: [{ label: "repo", value: "https://github.com/r-fameli/Socky" }],
     };
 
     const tronItem: GalleryItemDetails = {
@@ -103,6 +130,7 @@ const ProjectGallery = () => {
         caption: "tron bot",
         description: tronDescription,
         tags: ["python", "numpy"],
+        links: [{ label: "repo", value: "" }],
     };
 
     const jtItem: GalleryItemDetails = {
@@ -112,6 +140,12 @@ const ProjectGallery = () => {
         caption: "journaltexter",
         description: journalTexterDescription,
         tags: ["java", "spark", "react", "sqlite"],
+        links: [
+            {
+                label: "repo",
+                value: "https://github.com/r-fameli/journaltexter",
+            },
+        ],
     };
 
     const vtItem: GalleryItemDetails = {
@@ -121,6 +155,16 @@ const ProjectGallery = () => {
         caption: "visual transformers",
         description: visualTransformersDescription,
         tags: ["python", "numpy", "tensorflow", "keras"],
+        links: [
+            {
+                label: "writeup",
+                value: "https://github.com/ethanga12/dl-final-project/tree/main/deliverables",
+            },
+            {
+                label: "repo",
+                value: "https://github.com/ethanga12/dl-final-project",
+            },
+        ],
     };
 
     const oldPortfolioItem: GalleryItemDetails = {
@@ -129,6 +173,12 @@ const ProjectGallery = () => {
         caption: "portfolio (2021)",
         description: oldPortfolioDescription,
         tags: ["react", "figma", "styled-components"],
+        links: [
+            {
+                label: "repo",
+                value: "https://github.com/r-fameli/old-portfolio",
+            },
+        ],
     };
 
     const newPortfolioItem: GalleryItemDetails = {
@@ -137,6 +187,12 @@ const ProjectGallery = () => {
         caption: "portfolio (2026)",
         description: newPortfolioDescription,
         tags: ["react", "figma", "scss"],
+        links: [
+            {
+                label: "repo",
+                value: "https://github.com/r-fameli/r-fameli.github.io",
+            },
+        ],
     };
 
     const ccvScriptItem: GalleryItemDetails = {
@@ -146,6 +202,12 @@ const ProjectGallery = () => {
         caption: "ccv account creation script",
         description: ccvScriptDescription,
         tags: ["selenium", "python"],
+        links: [
+            {
+                label: "repo",
+                value: "https://github.com/r-fameli/ccv_automation",
+            },
+        ],
     };
 
     return (
@@ -153,7 +215,7 @@ const ProjectGallery = () => {
             <GalleryRow item1={sockyItem} item2={tronItem} />
             <GalleryRow item1={jtItem} item2={vtItem} />
             <GalleryRow item1={ccvScriptItem} item2={oldPortfolioItem} />
-            <GalleryRow item1={undefined} item2={newPortfolioItem} />
+            <GalleryRow item1={newPortfolioItem} item2={undefined} />
         </div>
     );
 };
