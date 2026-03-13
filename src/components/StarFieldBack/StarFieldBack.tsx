@@ -63,7 +63,7 @@ const StarFieldBack = ({ children }: Props) => {
         if (!ctx) return;
 
         // Clear canvas completely - no trails
-        ctx.fillStyle = 'black';
+        ctx.fillStyle = '#010810';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         const stars = starsRef.current;
