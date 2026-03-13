@@ -1,6 +1,6 @@
-import React, { useRef, useEffect, useCallback } from 'react';
-import './StarFieldBack.scss';
-import { useAnimationFrame } from '../../hooks/useAnimationFrame';
+import React, { useRef, useEffect, useCallback } from "react";
+import "./StarFieldBack.scss";
+import { useAnimationFrame } from "../../hooks/useAnimationFrame";
 
 interface Star {
     x: number;
@@ -12,7 +12,7 @@ interface Star {
 
 type Props = {
     children?: React.ReactNode;
-}
+};
 
 // High-performance configuration
 const CONFIG = {
@@ -22,7 +22,7 @@ const CONFIG = {
     MIN_STAR_SPEED: 0.2, // Faster movement for better visual effect
     MAX_STAR_SPEED: 1.0,
     MIN_OPACITY: 0.5, // Higher minimum opacity for simpler rendering
-    MAX_OPACITY: 1.0
+    MAX_OPACITY: 1.0,
 };
 
 const StarFieldBack = ({ children }: Props) => {
@@ -34,23 +34,31 @@ const StarFieldBack = ({ children }: Props) => {
     // Initialize stars - simplified for performance
     const initStars = useCallback((canvas: HTMLCanvasElement) => {
         const stars: Star[] = [];
-        
+
         // Calculate aspect ratio correction factor
         const aspectRatio = canvas.width / canvas.height;
         const heightCorrectionFactor = 1 / aspectRatio;
-        
+
         for (let i = 0; i < CONFIG.NUM_STARS; i++) {
             stars.push({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
                 // Adjust star size based on canvas height to maintain proportionality
-                size: (Math.random() * (CONFIG.MAX_STAR_SIZE - CONFIG.MIN_STAR_SIZE) + CONFIG.MIN_STAR_SIZE) * heightCorrectionFactor,
-                speed: Math.random() * (CONFIG.MAX_STAR_SPEED - CONFIG.MIN_STAR_SPEED) + CONFIG.MIN_STAR_SPEED,
-                opacity: Math.random() * (CONFIG.MAX_OPACITY - CONFIG.MIN_OPACITY) + CONFIG.MIN_OPACITY
-                // REMOVED: twinkleSpeed (no more twinkling)
+                size:
+                    (Math.random() *
+                        (CONFIG.MAX_STAR_SIZE - CONFIG.MIN_STAR_SIZE) +
+                        CONFIG.MIN_STAR_SIZE) *
+                    heightCorrectionFactor,
+                speed:
+                    Math.random() *
+                        (CONFIG.MAX_STAR_SPEED - CONFIG.MIN_STAR_SPEED) +
+                    CONFIG.MIN_STAR_SPEED,
+                opacity:
+                    Math.random() * (CONFIG.MAX_OPACITY - CONFIG.MIN_OPACITY) +
+                    CONFIG.MIN_OPACITY,
             });
         }
-        
+
         starsRef.current = stars;
     }, []);
 
@@ -63,29 +71,29 @@ const StarFieldBack = ({ children }: Props) => {
         if (!ctx) return;
 
         // Faster clear operation - no trails
-        ctx.fillStyle = 'black';
+        ctx.fillStyle = "black";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         const stars = starsRef.current;
-        
-        // Simplified star rendering loop
-        stars.forEach(star => {
-            // REMOVED: twinkling logic - stars maintain constant opacity
-            ctx.beginPath();
-            ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`;
-            ctx.fill();
 
-            // REMOVED: glow effect for larger stars
+        // Simplified star rendering loop
+        stars.forEach((star) => {
+            ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`;
+            // Draw square instead of arc - MUCH FASTER
+            ctx.fillRect(
+                star.x - star.size / 2,
+                star.y - star.size / 2,
+                star.size,
+                star.size,
+            );
 
             // Move star upward - simplified
             star.y -= star.speed * (deltaTime / 16.67);
-            
+
             // Reset star when it goes off screen
             if (star.y < 0) {
                 star.y = canvas.height;
                 star.x = Math.random() * canvas.width;
-                // REMOVED: opacity variation on reset
             }
         });
     }, []);
@@ -100,11 +108,11 @@ const StarFieldBack = ({ children }: Props) => {
 
         // Get the ACTUAL display size of the canvas
         const rect = canvas.getBoundingClientRect();
-        
+
         // Set resolution to match display size exactly
         canvas.width = rect.width;
         canvas.height = rect.height;
-        
+
         // Reinitialize stars with new dimensions
         initStars(canvas);
     }, [initStars]);
@@ -118,24 +126,24 @@ const StarFieldBack = ({ children }: Props) => {
         const rect = canvas.getBoundingClientRect();
         canvas.width = rect.width;
         canvas.height = rect.height;
-        
-        contextRef.current = canvas.getContext('2d');
+
+        contextRef.current = canvas.getContext("2d");
         if (!contextRef.current) return;
-        
+
         initStars(canvas);
-        
+
         // Add resize listener
-        window.addEventListener('resize', handleResize);
+        window.addEventListener("resize", handleResize);
 
         return () => {
-            window.removeEventListener('resize', handleResize);
+            window.removeEventListener("resize", handleResize);
         };
     }, [initStars, handleResize]);
 
     return (
         <div ref={containerRef} className="starfield-container">
-            <canvas 
-                ref={canvasRef} 
+            <canvas
+                ref={canvasRef}
                 className="starfield-canvas"
                 aria-hidden="true"
             />
