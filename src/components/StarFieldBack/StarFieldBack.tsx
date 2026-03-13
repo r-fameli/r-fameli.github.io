@@ -7,7 +7,6 @@ interface Star {
     y: number;
     size: number;
     speed: number;
-    opacity: number;
 }
 
 type Props = {
@@ -16,13 +15,11 @@ type Props = {
 
 // High-performance configuration
 const CONFIG = {
-    NUM_STARS: 1000, // Increased star count for density
+    NUM_STARS: 700, // Increased star count for density
     MIN_STAR_SIZE: 0.3, // Smaller stars for better performance
     MAX_STAR_SIZE: 1.0, // Smaller range
     MIN_STAR_SPEED: 0.2, // Faster movement for better visual effect
     MAX_STAR_SPEED: 1.0,
-    MIN_OPACITY: 0.5, // Higher minimum opacity for simpler rendering
-    MAX_OPACITY: 1.0,
 };
 
 const StarFieldBack = ({ children }: Props) => {
@@ -53,9 +50,6 @@ const StarFieldBack = ({ children }: Props) => {
                     Math.random() *
                         (CONFIG.MAX_STAR_SPEED - CONFIG.MIN_STAR_SPEED) +
                     CONFIG.MIN_STAR_SPEED,
-                opacity:
-                    Math.random() * (CONFIG.MAX_OPACITY - CONFIG.MIN_OPACITY) +
-                    CONFIG.MIN_OPACITY,
             });
         }
 
@@ -70,15 +64,14 @@ const StarFieldBack = ({ children }: Props) => {
         const ctx = contextRef.current;
         if (!ctx) return;
 
-        // Faster clear operation - no trails
-        ctx.fillStyle = "black";
+        ctx.fillStyle = "#010810";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         const stars = starsRef.current;
 
         // Simplified star rendering loop
         stars.forEach((star) => {
-            ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`;
+            ctx.fillStyle = `rgba(255, 255, 255)`;
             // Draw square instead of arc - MUCH FASTER
             ctx.fillRect(
                 star.x - star.size / 2,

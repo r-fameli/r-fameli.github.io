@@ -18,11 +18,6 @@
     height: 100%;
     z-index: -10;
     pointer-events: none; // Allows clicks to pass through to elements below
-    
-    // Ensure it stays behind all content
-    @media (max-width: 768px) {
-        z-index: -1;
-    }
 }
 
 // Performance optimization for mobile
