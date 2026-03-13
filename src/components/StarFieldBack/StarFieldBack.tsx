@@ -15,23 +15,38 @@ type Props = {
     children?: React.ReactNode;
 }
 
+// Configuration constants - easily adjustable
+const CONFIG = {
+    NUM_STARS: 200,
+    DISABLE_TRAILS: true, // Set to false if you want trails back
+    MIN_STAR_SIZE: 0.5,
+    MAX_STAR_SIZE: 2.5,
+    MIN_STAR_SPEED: 0.1,
+    MAX_STAR_SPEED: 0.8,
+    MIN_OPACITY: 0.2,
+    MAX_OPACITY: 1.0,
+    STAR_GLOW_THRESHOLD: 1.5, // Stars larger than this get glow effect
+    GLOW_MULTIPLIER: 2, // How much larger the glow is compared to star
+    GLOW_OPACITY: 0.3 // Opacity of glow effect
+};
+
 const StarFieldBack = ({ children }: Props) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
     const starsRef = useRef<Star[]>([]);
     const contextRef = useRef<CanvasRenderingContext2D | null>(null);
 
-    // Initialize stars
-    const initStars = useCallback((canvas: HTMLCanvasElement, numStars: number = 200) => {
+    // Initialize stars using CONFIG
+    const initStars = useCallback((canvas: HTMLCanvasElement) => {
         const stars: Star[] = [];
         
-        for (let i = 0; i < numStars; i++) {
+        for (let i = 0; i < CONFIG.NUM_STARS; i++) {
             stars.push({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
-                size: Math.random() * 2 + 0.5,
-                speed: Math.random() * 0.5 + 0.1,
-                opacity: Math.random() * 0.8 + 0.2,
+                size: Math.random() * (CONFIG.MAX_STAR_SIZE - CONFIG.MIN_STAR_SIZE) + CONFIG.MIN_STAR_SIZE,
+                speed: Math.random() * (CONFIG.MAX_STAR_SPEED - CONFIG.MIN_STAR_SPEED) + CONFIG.MIN_STAR_SPEED,
+                opacity: Math.random() * (CONFIG.MAX_OPACITY - CONFIG.MIN_OPACITY) + CONFIG.MIN_OPACITY,
                 twinkleSpeed: Math.random() * 0.02 + 0.01
             });
         }
@@ -47,8 +62,8 @@ const StarFieldBack = ({ children }: Props) => {
         const ctx = contextRef.current;
         if (!ctx) return;
 
-        // Clear canvas with slight fade effect for trails
-        ctx.fillStyle = 'hsla(212, 88%, 3%, 0.10)';
+        // Clear canvas completely - no trails
+        ctx.fillStyle = 'black';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         const stars = starsRef.current;
@@ -57,7 +72,7 @@ const StarFieldBack = ({ children }: Props) => {
         stars.forEach(star => {
             // Update opacity for twinkling effect
             star.opacity += star.twinkleSpeed;
-            if (star.opacity > 1 || star.opacity < 0.2) {
+            if (star.opacity > CONFIG.MAX_OPACITY || star.opacity < CONFIG.MIN_OPACITY) {
                 star.twinkleSpeed = -star.twinkleSpeed;
             }
 
@@ -68,21 +83,21 @@ const StarFieldBack = ({ children }: Props) => {
             ctx.fill();
 
             // Add glow effect for larger stars
-            if (star.size > 1.5) {
+            if (star.size > CONFIG.STAR_GLOW_THRESHOLD) {
                 ctx.beginPath();
-                ctx.arc(star.x, star.y, star.size * 2, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity * 0.3})`;
+                ctx.arc(star.x, star.y, star.size * CONFIG.GLOW_MULTIPLIER, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity * CONFIG.GLOW_OPACITY})`;
                 ctx.fill();
             }
 
-            // Move star (parallax effect)
+            // Move star with deltaTime for frame-rate independence
             star.y += star.speed * (deltaTime / 16.67);
             
             // Reset star when it goes off screen
             if (star.y > canvas.height) {
                 star.y = 0;
                 star.x = Math.random() * canvas.width;
-                star.opacity = Math.random() * 0.8 + 0.2;
+                star.opacity = Math.random() * (CONFIG.MAX_OPACITY - CONFIG.MIN_OPACITY) + CONFIG.MIN_OPACITY;
             }
         });
     }, []);
