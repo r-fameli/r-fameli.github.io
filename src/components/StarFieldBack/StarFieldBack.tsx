@@ -48,7 +48,7 @@ const StarFieldBack = ({ children }: Props) => {
         if (!ctx) return;
 
         // Clear canvas with slight fade effect for trails
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+        ctx.fillStyle = 'hsla(212, 88%, 3%, 0.10)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         const stars = starsRef.current;

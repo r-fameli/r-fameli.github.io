@@ -1,5 +1,9 @@
+@use '../../variables';
+
 // Starfield Container and Canvas Styling
 .starfield-container {
+    background-color: variables.$color-main;
+    z-index: -10;
     position: relative;
     width: 100%;
     min-height: 100vh; // Minimum height of viewport
@@ -25,19 +29,5 @@
 @media (prefers-reduced-motion: reduce) {
     .starfield-canvas {
         animation: none !important;
-    }
-}
-
-// Dark mode support
-@media (prefers-color-scheme: dark) {
-    .starfield-canvas {
-        background: #000;
-    }
-}
-
-// High contrast mode support
-@media (prefers-contrast: high) {
-    .starfield-canvas {
-        background: #000;
     }
 }
