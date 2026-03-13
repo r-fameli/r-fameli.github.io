@@ -1,6 +1,13 @@
-// Starfield Canvas Styling
+// Starfield Container and Canvas Styling
+.starfield-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; // Minimum height of viewport
+    overflow: visible; // Allow content to extend beyond viewport
+}
+
 .starfield-canvas {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;

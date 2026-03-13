@@ -11,8 +11,13 @@ interface Star {
     twinkleSpeed: number;
 }
 
-const StarFieldBack = () => {
+type Props = {
+    children?: React.ReactNode;
+}
+
+const StarFieldBack = ({ children }: Props) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
     const starsRef = useRef<Star[]>([]);
     const contextRef = useRef<CanvasRenderingContext2D | null>(null);
 
@@ -71,7 +76,7 @@ const StarFieldBack = () => {
             }
 
             // Move star (parallax effect)
-            star.y += star.speed;
+            star.y += star.speed * (deltaTime / 16.67);
             
             // Reset star when it goes off screen
             if (star.y > canvas.height) {
@@ -122,11 +127,14 @@ const StarFieldBack = () => {
     }, [initStars, handleResize]);
 
     return (
-        <canvas 
-            ref={canvasRef} 
-            className="starfield-canvas"
-            aria-hidden="true"
-        />
+        <div ref={containerRef} className="starfield-container">
+            <canvas 
+                ref={canvasRef} 
+                className="starfield-canvas"
+                aria-hidden="true"
+            />
+            {children}
+        </div>
     );
 };
 
