@@ -13,12 +13,12 @@ type Props = {
     children?: React.ReactNode;
 };
 
-// High-performance configuration
+// Config variables
 const CONFIG = {
-    NUM_STARS: 700, // Increased star count for density
-    MIN_STAR_SIZE: 0.3, // Smaller stars for better performance
-    MAX_STAR_SIZE: 1.0, // Smaller range
-    MIN_STAR_SPEED: 0.2, // Faster movement for better visual effect
+    NUM_STARS: 1000,
+    MIN_STAR_SIZE: 0.3,
+    MAX_STAR_SIZE: 1.0,
+    MIN_STAR_SPEED: 0.2,
     MAX_STAR_SPEED: 1.0,
 };
 
@@ -28,9 +28,30 @@ const StarFieldBack = ({ children }: Props) => {
     const starsRef = useRef<Star[]>([]);
     const contextRef = useRef<CanvasRenderingContext2D | null>(null);
 
-    // Initialize stars - simplified for performance
+    // Screen size detection and scaling
+    const getStarSizeScale = useCallback(() => {
+        const canvas = canvasRef.current;
+        if (!canvas) return 1;
+
+        // Get actual pixel density
+        const dpr = window.devicePixelRatio || 1;
+        const rect = canvas.getBoundingClientRect();
+
+        // Calculate scale factor based on screen dimensions
+        // Smaller screens get smaller stars
+        const screenScale = Math.min(rect.width, rect.height) / 2000;
+
+        // Adjust for pixel density - higher density needs smaller stars
+        const densityScale = 1 / Math.sqrt(dpr);
+
+        // Combine scaling factors
+        return screenScale * densityScale;
+    }, []);
+
+    // Modified star initialization
     const initStars = useCallback((canvas: HTMLCanvasElement) => {
         const stars: Star[] = [];
+        const sizeScale = getStarSizeScale();
 
         // Calculate aspect ratio correction factor
         const aspectRatio = canvas.width / canvas.height;
@@ -40,21 +61,22 @@ const StarFieldBack = ({ children }: Props) => {
             stars.push({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
-                // Adjust star size based on canvas height to maintain proportionality
+                // Apply size scaling for responsive behavior
                 size:
                     (Math.random() *
                         (CONFIG.MAX_STAR_SIZE - CONFIG.MIN_STAR_SIZE) +
                         CONFIG.MIN_STAR_SIZE) *
-                    heightCorrectionFactor,
+                    heightCorrectionFactor *
+                    sizeScale,
                 speed:
                     Math.random() *
-                        (CONFIG.MAX_STAR_SPEED - CONFIG.MIN_STAR_SPEED) +
+                    (CONFIG.MAX_STAR_SPEED - CONFIG.MIN_STAR_SPEED) +
                     CONFIG.MIN_STAR_SPEED,
             });
         }
 
         starsRef.current = stars;
-    }, []);
+    }, [getStarSizeScale]);
 
     // Optimized animation callback
     const animate = useCallback((deltaTime: number) => {
@@ -69,10 +91,9 @@ const StarFieldBack = ({ children }: Props) => {
 
         const stars = starsRef.current;
 
-        // Simplified star rendering loop
+        // Star rendering loop
         stars.forEach((star) => {
             ctx.fillStyle = `rgba(255, 255, 255)`;
-            // Draw square instead of arc - MUCH FASTER
             ctx.fillRect(
                 star.x - star.size / 2,
                 star.y - star.size / 2,
@@ -80,7 +101,7 @@ const StarFieldBack = ({ children }: Props) => {
                 star.size,
             );
 
-            // Move star upward - simplified
+            // Move star upward
             star.y -= star.speed * (deltaTime / 16.67);
 
             // Reset star when it goes off screen
@@ -94,7 +115,7 @@ const StarFieldBack = ({ children }: Props) => {
     // Use the animation frame hook
     useAnimationFrame(animate);
 
-    // Handle resize with proper resolution matching
+    // Updated resize handler to recalculate scaling
     const handleResize = useCallback(() => {
         const canvas = canvasRef.current;
         if (!canvas) return;
@@ -106,7 +127,7 @@ const StarFieldBack = ({ children }: Props) => {
         canvas.width = rect.width;
         canvas.height = rect.height;
 
-        // Reinitialize stars with new dimensions
+        // Reinitialize stars with new dimensions and scaling
         initStars(canvas);
     }, [initStars]);
 
