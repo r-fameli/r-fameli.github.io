@@ -4,6 +4,7 @@ import SockyDemo from "../../assets/videos/socky-demo.mp4";
 import TronDemo from "../../assets/videos/tron-demo.mp4";
 import MediaCard from "./MediaCard";
 import CCVScriptDemo from "../../assets/videos/ccv-script-demo.mp4";
+import OldPortfolioDemo from "../../assets/videos/portfolio-2021-demo.mp4";
 import {
     ccvScriptDescription,
     journalTexterDescription,
@@ -170,6 +171,7 @@ const ProjectGallery = () => {
     const oldPortfolioItem: GalleryItemDetails = {
         id: 5,
         type: "video",
+        source: OldPortfolioDemo,
         caption: "portfolio (2021)",
         description: oldPortfolioDescription,
         tags: ["react", "figma", "styled-components"],
