@@ -29,8 +29,6 @@ export const oldPortfolioDescription = (
         my first ever portfolio, in which I taught myself much of my current
         React foundations. no component libraries. lots of learnings around
         visual design, responsiveness and styling in CSS.
-        <br />
-        (video to be added soon)
     </div>
 );
 
