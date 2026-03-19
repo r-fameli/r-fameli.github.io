@@ -58,7 +58,7 @@ const ProjectGallery = () => {
         source: JournalTexterDemo,
         caption: "journaltexter",
         description: journalTexterDescription,
-        tags: ["java", "spark", "react", "sqlite"],
+        tags: ["java", "spark", "react", "sqlite", "css"],
         links: [
             {
                 label: "repo",
@@ -92,7 +92,7 @@ const ProjectGallery = () => {
         source: OldPortfolioDemo,
         caption: "portfolio (2021)",
         description: oldPortfolioDescription,
-        tags: ["react", "figma", "styled-components"],
+        tags: ["react", "figma", "styled-components", "css"],
         links: [
             {
                 label: "repo",
