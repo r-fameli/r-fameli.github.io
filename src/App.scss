@@ -35,7 +35,7 @@ a {
     align-items: center;
 }
 
-.floating-box-container > div {
+.floating-box-container>div {
     width: 100%;
 }
 
@@ -72,4 +72,27 @@ h3 {
 
 body {
     font-size: clamp(1.2rem, 1rem + 1vw, 1.3rem);
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.3rem);
+        font-weight: lighter;
+    }
+
+    h2 {
+        font-size: clamp(1.2rem, 0.9rem + 1.3vw, 1.4rem);
+    }
+
+    h3 {
+        font-size: clamp(1.1rem, 0.9rem + 1.1vw, 1.3rem);
+    }
+
+    .nav-font {
+        font-size: clamp(1rem, 2.25vw, 1.3rem);
+    }
+
+    body {
+        font-size: clamp(0.8rem, 0.6rem + 1vw, 1.2rem);
+    }
 }
