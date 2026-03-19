@@ -2,7 +2,6 @@ import VisualTransformersDemo from "../../assets/images/visual-transformers-post
 import JournalTexterDemo from "../../assets/videos/journaltexter-demo.mp4";
 import SockyDemo from "../../assets/videos/socky-demo.mp4";
 import TronDemo from "../../assets/videos/tron-demo.mp4";
-import MediaCard from "./MediaCard";
 import CCVScriptDemo from "../../assets/videos/ccv-script-demo.mp4";
 import OldPortfolioDemo from "../../assets/videos/portfolio-2021-demo.mp4";
 import {
@@ -15,13 +14,14 @@ import {
     visualTransformersDescription,
 } from "./ProjectDescriptions";
 import "./ProjectGallery.scss";
+import GalleryRow from "./GalleryRow";
 
 type LabeledItem = {
     label: string;
     value: string;
 };
 
-type GalleryItemDetails = {
+export type GalleryItemDetails = {
     id: number;
     type: "video" | "img";
     source?: string;
@@ -29,88 +29,6 @@ type GalleryItemDetails = {
     description: React.ReactNode;
     tags?: string[];
     links?: LabeledItem[];
-};
-
-type RowProps = {
-    item1?: GalleryItemDetails;
-    item2?: GalleryItemDetails;
-};
-
-const GalleryRow = ({ item1, item2 }: RowProps) => {
-    return (
-        <div className="gallery-row">
-            <div className="flex-col-start">
-                {item1 && (
-                    <div className="gallery-item">
-                        {item1.source && (
-                            <MediaCard
-                                id={item1.id}
-                                source={item1.source}
-                                type={item1.type}
-                            />
-                        )}
-                        <h3>{item1.caption}</h3>
-                        <div className="gallery-description">
-                            {item1.description}
-                        </div>
-                        {item1.tags && (
-                            <div className="tag-group">
-                                {item1.tags.map((tag) => (
-                                    <span className="tech-tag">{tag}</span>
-                                ))}
-                            </div>
-                        )}
-                        {item1.links && (
-                            <div className="tag-group">
-                                {item1.links.map(({ label, value }) => (
-                                    <a href={value} target="_blank">
-                                        <span className="link-tag">
-                                            {label}
-                                        </span>
-                                    </a>
-                                ))}
-                            </div>
-                        )}
-                    </div>
-                )}
-            </div>
-            <div className="flex-col-end">
-                {item2 && (
-                    <div className="gallery-item">
-                        {item2.source && (
-                            <MediaCard
-                                id={item2.id}
-                                source={item2.source}
-                                type={item2.type}
-                            />
-                        )}
-                        <h3>{item2.caption}</h3>
-                        <div className="gallery-description">
-                            {item2.description}
-                        </div>
-                        {item2.tags && (
-                            <div className="tag-group">
-                                {item2.tags.map((tag) => (
-                                    <span className="tech-tag">{tag}</span>
-                                ))}
-                            </div>
-                        )}
-                        {item2.links && (
-                            <div className="tag-group">
-                                {item2.links.map(({ label, value }) => (
-                                    <a href={value} target="_blank">
-                                        <span className="link-tag">
-                                            {label}
-                                        </span>
-                                    </a>
-                                ))}
-                            </div>
-                        )}
-                    </div>
-                )}
-            </div>
-        </div>
-    );
 };
 
 const ProjectGallery = () => {
