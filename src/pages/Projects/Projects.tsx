@@ -1,5 +1,5 @@
 import type { RefObject } from "react";
-import ProjectGallery from "../NewProjects/ProjectGallery";
+import ProjectGallery from "../../components/ProjectGallery/ProjectGallery";
 
 type Props = {
     sentinelRef: RefObject<HTMLDivElement | null>;
