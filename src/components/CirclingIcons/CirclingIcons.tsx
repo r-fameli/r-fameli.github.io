@@ -18,7 +18,7 @@ const CirclingIcons = ({ icons }: Props) => {
     const DIST_Y_OFFSET = -12; // cqw
     // Velocity Variables
     // velocity units are degrees per second
-    const VELOCITY_BASE = 45;
+    const VELOCITY_BASE = 30;
 
     // STATES
     const [velocity, setVelocity] = useState(VELOCITY_BASE);

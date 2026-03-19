@@ -1,17 +1,15 @@
 import Resume from "../../assets/documents/Resume.pdf";
 import CirclingIcons from "./CirclingIcons";
 import "./CirclingIconsIntro.scss";
-// import ReactIcon from '../../assets/icons/original/react.svg'
-// import FigmaIcon from '../../assets/icons/original/figma.svg'
-// import PythonIcon from '../../assets/icons/original/python.svg'
-// import JavaIcon from '../../assets/icons/original/java.svg'
-// import TypescriptIcon from '../../assets/icons/original/typescript.svg'
-import ReactIcon from '../../assets/icons/recolored/react.svg'
-import FigmaIcon from '../../assets/icons/recolored/figma.svg'
-import PythonIcon from '../../assets/icons/recolored/python.svg'
-import JavaIcon from '../../assets/icons/recolored/java.svg'
-import TypescriptIcon from '../../assets/icons/recolored/typescript.svg'
-
+import ReactIcon from '../../assets/icons/react.svg'
+import FigmaIcon from '../../assets/icons/figma.svg'
+import PythonIcon from '../../assets/icons/python.svg'
+import JavaIcon from '../../assets/icons/java.svg'
+import TypescriptIcon from '../../assets/icons/typescript.svg'
+import AzureIcon from '../../assets/icons/azure.svg';
+import JavascriptIcon from '../../assets/icons/javascript.svg';
+import RedisIcon from '../../assets/icons/redis.svg';
+import SqlIcon from '../../assets/icons/azure-sql.svg';
 
 import { useEffect, useRef, useState } from "react";
 
@@ -52,6 +50,10 @@ const CirclingIconsIntro = () => {
         FigmaIcon,
         JavaIcon,
         PythonIcon,
+        AzureIcon,
+        JavascriptIcon,
+        RedisIcon,
+        SqlIcon,
     ]
 
     return (

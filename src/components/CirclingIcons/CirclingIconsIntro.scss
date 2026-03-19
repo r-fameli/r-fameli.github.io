@@ -61,9 +61,9 @@ $circles-top-padding: 15cqh;
     background-color: variables.$color-planet;
 
     // Can add glow with the below styles
-    -webkit-box-shadow: 0px 0px 50px 10px variables.$color-planet;
-    -moz-box-shadow: 0px 0px 50px 10px variables.$color-planet;
-    box-shadow: 0px 0px 50px 10px variables.$color-planet;
+    -webkit-box-shadow: 0px 0px 2cqw 0.5cqw variables.$color-planet;
+    -moz-box-shadow: 0px 0px 2cqw 0.5cqw variables.$color-planet;
+    box-shadow: 0px 0px 2cqw 0.5cqw variables.$color-planet;
 }
 
 .little-circles {
