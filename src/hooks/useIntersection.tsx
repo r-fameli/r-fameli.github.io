@@ -4,7 +4,7 @@ const useIntersection = (sentinelRef: RefObject<HTMLDivElement | null>, observer
     const [intersecting, setIntersecting] = useState(false);
     useEffect(() => {
         const observer = new IntersectionObserver(([entry]) => {
-            if (!entry.isIntersecting) {
+            if (entry.isIntersecting) {
                 setIntersecting(true);
             } else {
                 setIntersecting(false);

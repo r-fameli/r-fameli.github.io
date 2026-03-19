@@ -7,8 +7,8 @@ type Props = {
 
 const NavItem = ({ navItem }: Props) => {
     const { sentinel, key, label } = navItem;
-    const isIntersecting = useIntersection(sentinel, {threshold: 0.4});
-    const intersectClass = isIntersecting ? 'not-vis-item' : 'vis-item'
+    const isIntersecting = useIntersection(sentinel, {threshold: 0.2});
+    const intersectClass = isIntersecting ? 'vis-item' : 'not-vis-item';
     return <div key={key}>
         <a href={`#${key}`} className={'nav-item ' + intersectClass}>{label}</a>
     </div>
