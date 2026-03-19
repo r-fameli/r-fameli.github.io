@@ -132,10 +132,10 @@ const ProjectGallery = () => {
 
     return (
         <div className="video-gallery">
-            <GalleryRow item1={sockyItem} item2={tronItem} />
-            <GalleryRow item1={jtItem} item2={vtItem} />
-            <GalleryRow item1={ccvScriptItem} item2={oldPortfolioItem} />
-            <GalleryRow item1={newPortfolioItem} item2={undefined} />
+            <GalleryRow items={[sockyItem, tronItem]} />
+            <GalleryRow items={[jtItem, vtItem]} />
+            <GalleryRow items={[ccvScriptItem, oldPortfolioItem]} />
+            <GalleryRow items={[newPortfolioItem]} />
         </div>
     );
 };
