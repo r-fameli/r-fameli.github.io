@@ -51,7 +51,24 @@ const CirclingIcons = ({ icons }: Props) => {
 
             const y = CENTER + (xBeforeRot * sinRot + yBeforeRot * cosRot) + randomYOffsets[i];
             // z-index
-            const z = angle < 180 ? 5 : -1;
+            let z = -1;
+
+            // Need to change the z values based on the relative angle, especially on the sides where it transitions from near side to far side
+            // 0 - 180 is near side of the orbit, 180 - 360 is far side of orbit.
+            if (angle < 30) {
+                // color = '';
+                z = 2;
+            } else if (angle < 150) {
+                z = 3;
+            } else if (angle < 180) {
+                z = 2;
+            } else if (angle < 210) {
+                z = 1;
+            } else if (angle < 330) {
+                z = -1;
+            } else {
+                z = 1
+            }
             positions[i] = [x, y, z];
         }
         return positions;
