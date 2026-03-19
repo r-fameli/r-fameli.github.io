@@ -29,7 +29,7 @@ hr {
 }
 
 // CIRCLING ICONS
-$big-circle-size: 15cqw;
+$big-circle-size: 13cqw;
 $small-circle-size: 8cqw;
 $small-circle-frame-size: 40cqw;
 $circles-top-padding: 15cqh;
@@ -61,9 +61,9 @@ $circles-top-padding: 15cqh;
     background-color: variables.$color-planet;
 
     // Can add glow with the below styles
-    -webkit-box-shadow: 0px 0px 33px 4px variables.$color-planet;
-    -moz-box-shadow: 0px 0px 33px 4px variables.$color-planet;
-    box-shadow: 0px 0px 33px 4px variables.$color-planet;
+    -webkit-box-shadow: 0px 0px 50px 10px variables.$color-planet;
+    -moz-box-shadow: 0px 0px 50px 10px variables.$color-planet;
+    box-shadow: 0px 0px 50px 10px variables.$color-planet;
 }
 
 .little-circles {
