@@ -1,14 +1,15 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import "./CirclingIconsIntro.scss";
 import { useAnimationFrame } from "../../hooks/useAnimationFrame";
 
 const radians = (degrees: number) => degrees * (Math.PI / 180);
 
 type Props = {
-    numCircles: number;
+    icons: string[];
 };
 
-const CirclingIcons = ({ numCircles }: Props) => {
+const CirclingIcons = ({ icons }: Props) => {
+    const numCircles = icons.length;
     // Placing Constants, in cqw and degrees
     const CENTER = 20; // cqw
     const DIST_TO_CENTER = 15; // cqw
@@ -17,7 +18,7 @@ const CirclingIcons = ({ numCircles }: Props) => {
     const DIST_Y_OFFSET = -12; // cqw
     // Velocity Variables
     // velocity units are degrees per second
-    const VELOCITY_BASE = 15;
+    const VELOCITY_BASE = 45;
 
     // STATES
     const [velocity, setVelocity] = useState(VELOCITY_BASE);
@@ -27,6 +28,14 @@ const CirclingIcons = ({ numCircles }: Props) => {
         const angleSteps = 360 / numCircles;
         const positions = new Array(numCircles);
         const rotationOffsetRadians = radians(ROTATION_OFFSET);
+
+        const MAX_RANDOM_OFFSET = 4; // Adjust this value as needed
+
+        // Generate random offsets once per component instance (more efficient)
+        const randomYOffsets = useMemo(() => (
+            Array.from({ length: numCircles }, () => (Math.random() - 0.5) * 2 * MAX_RANDOM_OFFSET)
+        ), [numCircles]);
+
         for (let i = 0; i < numCircles; i++) {
             const angle = (offset + angleSteps * i) % 360;
 
@@ -39,7 +48,8 @@ const CirclingIcons = ({ numCircles }: Props) => {
             const cosRot = Math.cos(rotationOffsetRadians);
             const sinRot = Math.sin(rotationOffsetRadians);
             const x = CENTER + (xBeforeRot * cosRot - yBeforeRot * sinRot);
-            const y = CENTER + (xBeforeRot * sinRot + yBeforeRot * cosRot);
+
+            const y = CENTER + (xBeforeRot * sinRot + yBeforeRot * cosRot) + randomYOffsets[i];
             // z-index
             const z = angle < 180 ? 5 : -1;
             positions[i] = [x, y, z];
@@ -69,12 +79,13 @@ const CirclingIcons = ({ numCircles }: Props) => {
                     <li
                         key={i}
                         style={{
-                            // transform: `translate3d(${x}px, ${y}px, 0)`,
                             transform: `translate3d(${x}cqw, ${y}cqw, 0)`,
                             transition: "transform 0.1s ease-out",
                             zIndex: zIndex,
                         }}
-                    ></li>
+                    >
+                        <img src={icons[i]} />
+                    </li>
                 ))}
             </ul>
         </div>

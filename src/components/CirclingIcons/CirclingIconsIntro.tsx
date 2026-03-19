@@ -1,6 +1,17 @@
 import Resume from "../../assets/documents/Resume.pdf";
 import CirclingIcons from "./CirclingIcons";
 import "./CirclingIconsIntro.scss";
+// import ReactIcon from '../../assets/icons/original/react.svg'
+// import FigmaIcon from '../../assets/icons/original/figma.svg'
+// import PythonIcon from '../../assets/icons/original/python.svg'
+// import JavaIcon from '../../assets/icons/original/java.svg'
+// import TypescriptIcon from '../../assets/icons/original/typescript.svg'
+import ReactIcon from '../../assets/icons/recolored/react.svg'
+import FigmaIcon from '../../assets/icons/recolored/figma.svg'
+import PythonIcon from '../../assets/icons/recolored/python.svg'
+import JavaIcon from '../../assets/icons/recolored/java.svg'
+import TypescriptIcon from '../../assets/icons/recolored/typescript.svg'
+
 
 import { useEffect, useRef, useState } from "react";
 
@@ -35,9 +46,17 @@ const CirclingIconsIntro = () => {
         return () => resizeObserver.disconnect();
     }, []);
 
+    const iconList = [
+        ReactIcon,
+        TypescriptIcon,
+        FigmaIcon,
+        JavaIcon,
+        PythonIcon,
+    ]
+
     return (
         <div className={`circling-icons-intro ${isWrapping ? 'wrapped-intro' : ''}`} ref={containerRef}>
-            <CirclingIcons numCircles={8} />
+            <CirclingIcons icons={iconList} />
             <div className={"intro"}>
                 <div className="text-center title">Riki Fameli</div>
                 <div className="text-center subtitle">

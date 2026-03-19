@@ -29,7 +29,7 @@ hr {
 }
 
 // CIRCLING ICONS
-$big-circle-size: 18cqw;
+$big-circle-size: 15cqw;
 $small-circle-size: 8cqw;
 $small-circle-frame-size: 40cqw;
 $circles-top-padding: 15cqh;
@@ -40,6 +40,7 @@ $circles-top-padding: 15cqh;
         flex-direction: row !important;
         justify-content: space-around;
     }
+
     $circles-top-padding: calc(90cqh - $big-circle-size);
 }
 
@@ -58,6 +59,11 @@ $circles-top-padding: 15cqh;
     width: $big-circle-size;
     height: $big-circle-size;
     background-color: variables.$color-planet;
+
+    // Can add glow with the below styles
+    -webkit-box-shadow: 0px 0px 33px 4px variables.$color-planet;
+    -moz-box-shadow: 0px 0px 33px 4px variables.$color-planet;
+    box-shadow: 0px 0px 33px 4px variables.$color-planet;
 }
 
 .little-circles {
@@ -76,14 +82,12 @@ $circles-top-padding: 15cqh;
     transform-origin: center;
 
     /* Set it to be in the center of bigCircle */
-    transform: translate3d(
-        calc($big-circle-size / 2),
-        calc($big-circle-size / 2),
-        0
-    );
-    background-color: variables.$color-moons;
+    transform: translate3d(calc($big-circle-size / 2),
+            calc($big-circle-size / 2),
+            0);
+    // background-color: variables.$color-moons;
     color: black;
-    display: block;
+    display: flex;
     position: absolute;
     border-radius: 50%;
     width: $small-circle-size;
@@ -92,4 +96,13 @@ $circles-top-padding: 15cqh;
     text-align: center;
     margin-left: calc(-1 / 2 * $small-circle-size);
     margin-top: calc(-1 / 2 * $small-circle-size);
+    // -webkit-box-shadow: 0px 0px 13px 2px variables.$color-moons;
+    // -moz-box-shadow: 0px 0px 13px 2px variables.$color-moons;
+    // box-shadow: 0px 0px 13px 2px variables.$color-moons;
+
+    img {
+        margin: auto;
+        width: 80%;
+        height: 80%;
+    }
 }
