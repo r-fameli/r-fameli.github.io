@@ -17,13 +17,19 @@ const About = ({ sentinelRef }: Props) => {
                         <p>
                             Hey there! I'm Riki. I'm a full-stack developer
                             previously at Microsoft and a Brown
-                            University alumnus. I love building web experiences that
-                            feel fluid and creative, and I'm eager to push the boundaries of what
-                            web/frontend development looks like. In my work, I enjoy making both users
-                            and developers happy and building things
-                            that make others wonder "how did he do that?". I'm also passionate
-                            about teaching others, learning new skills, human rights, and all sorts of physical hobbies
-                            ranging from aerial acrobatics to jiu jitsu.
+                            University alumnus. I came to software engineering
+                            because I wanted to build things that make people's lives easier, and I love creating fluid web experiences
+                            that creatively solve people's problems. Whether it's automating
+                            outdated processes, improving UI/UX, or fixing persistent issues, I'm always
+                            happy to find solutions and follow through with them. I'm also passionate
+                            about teaching others, learning new skills, and about human rights in the age of AI``.
+                        </p>
+                        <br />
+                        <p>
+                            In the past, I was a high school wrestling captain, an
+                            {' '}<a href="https://www.youtube.com/watch?v=nv531lIbPmk" target="_blank">aerial hoop coach</a>{' '}
+                            for Brown Aerial Acrobatics, and I've taken an assortment of dance and performance
+                            courses. I really enjoy physically active hobbies, and I'd love to hear about yours!
                         </p>
                     </span>
                 </div>
