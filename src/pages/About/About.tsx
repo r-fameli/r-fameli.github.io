@@ -18,11 +18,11 @@ const About = ({ sentinelRef }: Props) => {
                             Hey there! I'm Riki. I'm a full-stack developer
                             previously at Microsoft and a Brown
                             University alumnus. I came to software engineering
-                            because I wanted to build things that make people's lives easier, and I love creating fluid web experiences
-                            that creatively solve people's problems. Whether it's automating
+                            because I wanted to build things that make people's lives easier, and I love creating fluid web
+                            experiences to solve people's problems. Whether it's automating
                             outdated processes, improving UI/UX, or fixing persistent issues, I'm always
                             happy to find solutions and follow through with them. I'm also passionate
-                            about teaching others, learning new skills, and about human rights in the age of AI``.
+                            about teaching others, learning new skills, and about human rights in the age of AI.
                         </p>
                         <br />
                         <p>
