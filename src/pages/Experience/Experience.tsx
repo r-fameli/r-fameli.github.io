@@ -9,22 +9,17 @@ const Experience = ({ sentinelRef }: Props) => {
     const msftContent = (
         <div>
             <p>
-                Architected and built a full-stack web application ("SKULens")
-                through a serverless Azure Durable Functions API and a
-                Typescript React static web frontend to migrate away from legacy
-                python scripts and display metrics, charts, and reports related
-                to hardware testing.
-            </p>
-            <p>
-                Coordinated the end-to-end sign-off process on several Azure
-                Premium SSD V2 hardware SKUs.
+                I architected and built out a full-stack web application called
+                SKULens to replace our legacy python scripts and Word Docs and analyze datacenter
+                hardware performance. I built the Typescript React frontend and rewrote the original script into a serverless
+                Python web API using Azure Durable Functions. 
             </p>
         </div>
     );
 
     const msftInternContent = (
         <div>
-            Developed highly customizable charting interfaces using React
+            I developed highly customizable charting interfaces using React
             Typescript and Ant Design Charts to enable storage engineers to view
             trends and anomalies in logging metrics at a glance.
         </div>
@@ -33,13 +28,10 @@ const Experience = ({ sentinelRef }: Props) => {
     const brownTAContent = (
         <div>
             <p>
-                Assisted staff in redesigning course website in
-                HTML/CSS/JS/Figma to fit early 2000's theme for the spring 2022
-                semester.
-            </p>
-            <p>
-                Taught students foundational concepts of functional programming
-                and data manipulation at lab sessions and teaching hours
+                I taught students foundational concepts of functional programming at lab
+                sessions and office hours. Also helped develop and redesign the course website each semester,
+                especially for the <a href="https://cs.brown.edu/courses/csci0111/spring2022/index.html" target="_blank">Spring 2022 semester website</a>,
+                where I made Windows 2000-style draggable containers.
             </p>
         </div>
     );
@@ -47,7 +39,7 @@ const Experience = ({ sentinelRef }: Props) => {
     const ccvDescription = (
         <div>
             <p>
-                Developed an automation script in Python utilizing Selenium
+                I developed an automation script in Python utilizing Selenium
                 WebDriver to open a browser and assign privileges through
                 various web interfaces.
             </p>
