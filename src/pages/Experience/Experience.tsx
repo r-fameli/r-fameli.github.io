@@ -64,8 +64,8 @@ const Experience = ({ sentinelRef }: Props) => {
                     content={msftInternContent}
                 />
                 <FloatingBox
-                    title={"Brown University Dept. of Computer Science"}
-                    subtitle={"Undergraduate Teaching Assistant"}
+                    title={"Brown University"}
+                    subtitle={"Teaching Assistant, CS111 Computing Foundations"}
                     datesString={"Jun '21 - Dec '23"}
                     content={brownTAContent}
                 />
