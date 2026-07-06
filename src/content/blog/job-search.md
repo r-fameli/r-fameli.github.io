@@ -1,4 +1,4 @@
-# Riki's Guide to Job searching for Early-in-Career Software Engineer Roles
+# Riki's Guide to Job Searching for Early-in-Career Software Engineer Roles
 
 ## Introduction
 
@@ -16,15 +16,15 @@ eventually landed a role with similar pay as a SWE II at a mid-size company that
 I'm more excited about.
 
 For context on my experience job searching, I have 2 years of decently high
-impact non-internship experience at a Big Tech company and an Ivy League degree.
-In total, I sent out 200+ applications (this may seem like a relatively low
-number, but I was prioritizing mid- to high-match roles), failing many technical
-and behavioral interviews along the way. I spent much of the past few months
-scouring Reddit, YouTube and other sources to understand the current job market
-and how to compete in it. I'm not an expert or a job search consultant by any
-means, so take what I say here with a grain of salt. My hope is to give you, the
-reader, a broad overview of my understanding of how to conduct your job search
-in this weird time period.
+impact, non-internship experience at a Big Tech company and an Ivy League
+degree. In total, I sent out 200+ applications (this may seem like a relatively
+low number, but I was prioritizing mid- to high-match roles), failing many
+technical and behavioral interviews along the way. I spent much of the past few
+months scouring Reddit, YouTube, and other sources to understand the current job
+market and how to compete in it. I'm not an expert or a job search consultant by
+any means, so take what I say here with a grain of salt. My hope is to give you,
+the reader, a broad overview of my understanding of how to conduct your job
+search in this weird time period.
 
 Here are some things I'd like to focus on in this guide:
 
@@ -34,7 +34,7 @@ Here are some things I'd like to focus on in this guide:
 - Preparing for interviews (so you can succeed once you actually get them)
 
 _Note_: I did not use AI to write this post. The only thing I have to promote is
-a github repository that is free to use if you find it helpful :)
+a GitHub repository that is free to use if you find it helpful :)
 
 ## Building and Tailoring Your Resume
 
@@ -64,7 +64,7 @@ them to improve your chances.
 #### Make your resume as machine-readable as possible
 
 _NEVER USE CANVA TO MAKE YOUR RESUME_. ATS are bad at reading Canva resumes.
-There are a number of free ATS-compliancy tools online to check that your resume
+There are a number of free ATS compliance tools online to check that your resume
 is machine-readable. You should be able to highlight and copy the text of your
 PDF resume and paste it somewhere else without losing any of the information.
 Generally, avoid multi-column resume formats or anything that would not be
@@ -82,12 +82,12 @@ This was a huge improvement for a number of reasons:
 
 - File size decreased ~10x to 110 kB, with the same appearance
 - The resume became more readable by machines
-- AI agents could programatically pull and edit the most relevant bullet points
+- AI agents could programmatically pull and edit the most relevant bullet points
   into the HTML resume based on a given job description
 
 #### Resume Tailoring
 
-The best way to match your experience to job descriptions is to fill
+The best way to match your experience to job descriptions is to fill out
 applications that you're qualified for. We'll cover that later in finding
 applications. Once you've found a listing that matches your experience, you'll
 want to prioritize bullet points that match the listing, and ensure the wording
@@ -98,12 +98,7 @@ used the technology that they're looking for rather than mashing them somewhere
 in the resume.
 
 Resume tailoring can be automated with AI agents if you have a good system to
-edit and export customized resumes (e.g. HTML files, LaTeX, etc.). I would
-recommend always naming resume PDF files [First]\_[Last]\_resume.pdf, as I've
-found that sometimes file names can stick to names that were selected before
-being manually renamed (e.g. microsoft_resume.pdf might still show in the file
-even if you rename it). I named folders appropriately and then kept the resumes
-for specific companies in those folders.
+edit and export customized resumes (e.g. HTML files, LaTeX, etc.).
 
 #### Evaluating Your Resume
 
@@ -122,15 +117,16 @@ can get better results.
 
 There are tons of custom job boards, so you can choose whatever board is most
 relevant to you. I primarily used LinkedIn with filters applied through Chrome
-extensions as well as BuiltIn. [Hiring Cafe](https://hiring.cafe/) also often
+extensions as well as Built In. [Hiring Cafe](https://hiring.cafe/) also often
 had other jobs listed. Applying early is highly important right now, due to the
 sheer volume of applicants that any job posting gets, especially for those
-posted on LinkedIn. I tried to apply to jobs within the day, or within the past
-3 days once the day had been exhausted. I was successful with landing interviews
-on jobs posted on LinkedIn despite the high number of other applicants.
+posted on LinkedIn. I tried to apply to jobs posted that same day, or from the
+past 3 days once same-day postings had been exhausted. I was successful with
+landing interviews on jobs posted on LinkedIn despite the high number of other
+applicants.
 
 I grew tired of checking these boards every day. However, scraping LinkedIn is
-increasingly difficult using convential scraping technologies. I eventually
+increasingly difficult using conventional scraping technologies. I eventually
 found that I could automate the process using
 [Kimi WebBridge](https://www.kimi.com/features/webbridge), a browser automation
 tool for AI agents. Refer to the job application agent repository for more info
@@ -146,7 +142,7 @@ Any text you write into long-form responses should pass the smell test that a
 human wrote them. Recruiters are currently inundated with AI slop responses to
 custom questions and cover letters. From recruiter responses on Reddit, it seems
 that these are often instantly discarded if it's obvious that they were written
-with AI. Always look over any AI-generated text, and manually rewrite it if it
+by AI. Always look over any AI-generated text, and manually rewrite it if it
 doesn't pass the smell test. Emdashes and other obvious AI tells shouldn't be
 anywhere in your responses. I would generally recommend handwriting cover
 letters only for job apps that are worth the time investment, or not including
@@ -157,7 +153,7 @@ application questions. That way, I could refer to previous responses for future
 questions that were similar. If you have a strong enough writing agent, you can
 feed these as writing samples to automatically generate responses to future
 questions. I didn't find too much success with this, and ended up handwriting
-responses anyways.
+responses anyway.
 
 ## Personal Projects and Staying Busy
 
@@ -267,7 +263,7 @@ This is a paraphrased version of the pitch I used:
 > Before this, I interned at Poop Corp and worked on a frontend charting display
 > project. I studied at Gigachad University and TAed there for three semesters.
 > In general, I really enjoy the process of building things from the ground up,
-> and recently I've starting working on a browser game to play with friends. I'm
+> and recently I've started working on a browser game to play with friends. I'm
 > excited about Glorp Corp because [...].
 
 Now, this is a bit verbose and could probably use more workshopping, but I can
@@ -304,7 +300,7 @@ Glassdoor page. The goal of this is to glean any information that you can about
 the company's culture so that you can tailor some of your responses and show
 that that's what you're looking for.
 
-My most common reason for wanting to work somewhere was something like this -
+My most common reason for wanting to work somewhere was something like this:
 "After working at Poop Corp for a couple years, I want to work somewhere that
 feels more agile and where I have more ability to work on earlier-stage projects
 rather than the behemoths we work on there." Sometimes, I could be more specific
@@ -336,7 +332,7 @@ Some other questions that I've used:
 
 It's possible to overdo this, and seem as if you are asking "good questions" for
 the sake of asking "good questions". Be genuinely interested in your
-interviewers responses, and listen actively. Also, ensure that you're asking
+interviewer's responses, and listen actively. Also, ensure that you're asking
 questions that your interviewer is the best person to answer. Your recruiter is
 not going to be able to provide too much information about specific engineering
 culture questions.
@@ -377,7 +373,7 @@ working solution, but ran into some off-by-one error, or when you want to learn
 how to modify the code you started into a working solution.
 
 Looking up company-specific problems was helpful insofar as it helped me
-understand which patterns were most commonly represented, but I rarely, if ever
+understand which patterns were most commonly represented, but I rarely, if ever,
 saw a problem I had done specifically to practice for a specific company.
 
 When doing Leetcode technical interviews (as opposed to unsupervised
@@ -388,7 +384,7 @@ typically wrote most of my approach in code comments, discussed this with the
 interviewer, then moved them into the code block and wrote the code to implement
 each comment underneath.
 
-Some interviews I had required me to implement an "API", which essentially just
+Some interviews I had required me to implement an "API", which essentially
 boiled down to just writing out a function definition. Don't do more than you
 need to, and generally try and get these questions done iteratively (unoptimized
 -> optimized) unless you know the goal pattern well.
@@ -439,11 +435,11 @@ Here were my favorite free resources for studying system design in that time:
 - [Alex Xu's System Design Interview Book](https://bytes.usc.edu/~saty/courses/docs/data/SystemDesignInterview.pdf) -
   I read through all of this, but would recommend reading through the
   HelloInterview content over this book
-- Designing Data Intensive Algorithms 2nd ed. - The classic system design book.
-  I wouldn't recommend this unless you need to go deep into anything specific or
-  just have a lot of a time to spend on studying. Make sure you're reading the
-  second edition, as it's updated with more of the cloud native designs that are
-  prevalent today.
+- Designing Data Intensive Applications 2nd ed. - The classic system design
+  book. I wouldn't recommend this unless you need to go deep into anything
+  specific or just have a lot of time to spend on studying. Make sure you're
+  reading the second edition, as it's updated with more of the cloud native
+  designs that are prevalent today.
 
 Mock interviewing and practice in general are very important for information and
 pattern retention in system design. Passive learning will only take you so far,
@@ -454,9 +450,9 @@ implementing what you've learned to make learning more active.
 
 This is a newer genre of interview that has become more prevalent recently.
 Generally, you are tasked with either implementing something or debugging an
-existing project in relatively short time, requiring you to use AI tooling to
+existing project in a relatively short time, requiring you to use AI tooling to
 get the task done in time. For the few of these that I had, I had to bring and
-pay for my own model/agent to do the task (Opecode + Deepseek V4 got me through
+pay for my own model/agent to do the task (Opencode + DeepSeek V4 got me through
 these well and kept costs really low). There's not much you can do specifically
 to prepare for these other than to just build projects using AI coding tools.
 Creating my own project using AI tooling helped me to understand the agentic
@@ -470,7 +466,7 @@ pages). The main thing to prioritize here is communicating well with the
 interviewer, asking clarifying questions, even potentially asking for help if
 you get stuck.
 
-## Other resources
+## Other Resources
 
 ### Subreddits
 
