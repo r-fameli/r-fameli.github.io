@@ -173,6 +173,16 @@ Projects that I worked on during my unemployment gave me good conversation
 topics during interviews that could signal that I understood how to productively
 use AI tooling.
 
+If you're fresh out of college or generally low on work experience, I would take
+the advice from [this video](https://www.youtube.com/watch?v=0QXzV2T9p20) and
+spend the first few months building and shipping something using AI, rather than
+working on applications. You should have something that is publicly accessible
+that you can talk about in interviews and walk through your design decisions and
+process. It's easier than ever to build something from nothing. Building
+something that has potential to become an actual product is going to be a much
+better use of your time than applying if you don't have the work experience to
+point to.
+
 I personally used cheap open-weight models to start building a
 [multiplayer browser game](https://github.com/r-fameli/protectors.io). This was
 an interesting project, and it allowed me to replace a college project on my

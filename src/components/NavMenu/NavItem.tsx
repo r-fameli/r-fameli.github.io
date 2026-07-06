@@ -9,8 +9,14 @@ const NavItem = ({ navItem }: Props) => {
     const { sentinel, key, label } = navItem;
     const isIntersecting = useIntersection(sentinel, {threshold: 0.2});
     const intersectClass = isIntersecting ? 'vis-item' : 'not-vis-item';
+
+    const handleClick = (e: React.MouseEvent) => {
+        e.preventDefault();
+        sentinel.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
     return <div key={key}>
-        <a href={`#${key}`} className={'nav-item ' + intersectClass}>{label}</a>
+        <a href={`#${key}`} onClick={handleClick} className={'nav-item ' + intersectClass}>{label}</a>
     </div>
 }
 
