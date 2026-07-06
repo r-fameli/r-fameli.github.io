@@ -1,5 +1,7 @@
 # Riki's Guide to Job Searching for Early-in-Career Software Engineer Roles
 
+_or RGJSEICSWER, for short_.
+
 ## Introduction
 
 This is a guide to job searching for junior- to mid-level roles in software
