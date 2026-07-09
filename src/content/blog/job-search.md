@@ -139,7 +139,7 @@ Running your bullet points through AI can be helpful to ensure that you're
 properly highlighting impact while being concise. Having friends look over the
 resume is also helpful. There's no real way to get feedback from recruiters on
 your resume. Note that a low response rate is par for the course in the current
-job market, so don't be too hard on yourself. If the ratio of quality
+job market, so don't be too hard on yourself. If the ratio of high-quality
 applications filled to positive responses is abnormally low (e.g. >30:1), then
 you may want to see what larger changes you can make to the resume to see if you
 can get better results.
