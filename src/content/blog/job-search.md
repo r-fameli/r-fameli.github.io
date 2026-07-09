@@ -380,10 +380,10 @@ culture questions.
 
 Most people get nervous at some point going through behavioral interviews. The
 best remedy I'm aware of is exposure therapy. Get as many opportunities as you
-can to interview. Your prepared stories are never going to be enough to match
-100% of interview questions they throw at you, so you'll need to practice those
-moments where you're a bit off-guard and have to think on the fly. I recorded
-myself responding to questions on the fly a few times and did many mock
+can to interview. Your prepared stories are never going to be completely match
+all of the interview questions they throw at you, so you'll need to practice
+those moments where you're a bit off-guard and have to think on the fly. I
+recorded myself responding to questions on the fly a few times and did many mock
 interviews in between my real ones. Rambling and having very drawn-out responses
 is very common, and recording yourself can be a way to cut down on the fluff in
 your natural speech.
@@ -393,8 +393,9 @@ you are able to get. I remember having a final round panel interview for a role
 that I was well qualified in which I made a lot of mistakes. I had put a lot of
 stake on this interview as a way to escape unemployment and that mindset ended
 up costing me. The company rejected me, but I learned a lot from that interview
-and was able to land a better role later a few months down the road. Rejection
-is part of the process 😌.
+and was able to land a better role later a few months down the road. Try not to
+psyche yourself out during your interviews and relax as you need beforehand.
+Rejection is part of the process 😌.
 
 ### Leetcode Interviews and Online Assessments
 
