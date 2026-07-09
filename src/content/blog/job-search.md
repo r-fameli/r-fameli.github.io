@@ -30,13 +30,36 @@ search in this weird time period.
 
 Here are some things I'd like to focus on in this guide:
 
+- Automation tools that will help cut down on the manual work
 - Building a strong, ATS-friendly resume (how to attract recruiters)
-- Finding and filling job apps (and how to automate this process)
+- Finding and filling job apps
 - Building projects
 - Preparing for interviews (so you can succeed once you actually get them)
 
 _Note_: I did not use AI to write this post. The only thing I have to promote is
 a GitHub repository that is free to use if you find it helpful :)
+
+## Automation and Tracking Tools
+
+I put together a browser AI agent system that I started in the last ~1.5 months
+of the job search. Since conventional web scraping is difficult on LinkedIn, I
+found that this worked pretty well to reduce the manual work of finding job
+listings that fit my experience in the first place. I also experimented with
+using it for autofill, resume tailoring, and response / letter writing to
+varying degrees of success. The repo is here if you want to try this method out
+yourself:
+
+[AI Job Search System (GitHub)](https://github.com/r-fameli/joblin)
+
+I used the Simplify browser extension to autofill most of my applications. This
+was especially helpful on Workday applications that require a lot of repetitive
+input of work experience that is already listed on your resume. I did not pay
+for the premium version and used only the autofill and job tracking features. I
+originally tracked jobs in Notion, but I found the Simplify tracker to be
+slightly easier because it would often automatically copy the job description
+in.
+
+[Simplify Extension](https://simplify.jobs/)
 
 ## Building and Tailoring Your Resume
 
@@ -177,9 +200,9 @@ spend the first few months building and shipping something using AI, rather than
 working on applications. You should have something that is publicly accessible
 that you can talk about in interviews and walk through your design decisions and
 process. It's easier than ever to build something from nothing. Building
-something that has potential to become an actual product is going to be a much
-better use of your time than applying if you don't have the work experience to
-point to.
+something that has potential to become an actual product is likely going to be a
+much better use of your time than applying if you don't have any real work
+experience to point to.
 
 I personally used cheap open-weight models to start building a
 [multiplayer browser game](https://github.com/r-fameli/protectors.io). This was
@@ -192,8 +215,8 @@ strong signal that I can use AI tooling productively.
 If you want to maximize for hireability, I would follow current trends and build
 projects around that or incorporate them into projects. AI agents, local LLMs,
 etc. are things you can build around if you need ideas. That being said, I would
-build something that is genuinely interesting to you, as it can be a
-time-consuming process.
+build something that is genuinely interesting to you, as it is a time-consuming
+process.
 
 ## Preparing for Interviews
 
