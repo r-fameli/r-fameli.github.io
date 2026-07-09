@@ -21,20 +21,28 @@ For context on my experience job searching, I have 2 years of decently high
 impact, non-internship experience at a Big Tech company and an Ivy League
 degree. In total, I sent out 200+ applications (this may seem like a relatively
 low number, but I was prioritizing mid- to high-match roles), failing many
-technical and behavioral interviews along the way. I spent much of the past few
-months scouring Reddit, YouTube, and other sources to understand the current job
-market and how to compete in it. I'm not an expert or a job search consultant by
-any means, so take what I say here with a grain of salt. My hope is to give you,
-the reader, a broad overview of my understanding of how to conduct your job
-search in this weird time period.
+technical and behavioral interviews along the way.
 
-Here are some things I'd like to focus on in this guide:
+I spent much of the past few months scouring Reddit, YouTube, and other sources
+to understand the current job market and how to compete in it. I'm not an expert
+or a job search consultant by any means, so take what I say here with a grain of
+salt. My hope is to provide a comprehensive resource compiled from my own
+experience and from what others are saying online in various forums.
+
+Know that it is an especially difficult time to be job searching right now, and
+that you are not alone if you are struggling. It is common to send out hundreds
+of applications before feeling like any real progress is being made. Rejection
+is going to be frequent and should be considered part of the process. However,
+note that **you only have to win once**. You can get rejected hundreds of times
+and still land a decent job.
+
+With that being said, here are some things I'd like to focus on in this guide:
 
 - Automation tools that will help cut down on the manual work
-- Building a strong, ATS-friendly resume (how to attract recruiters)
+- Building a strong, ATS-friendly resume
 - Finding and filling job apps
 - Building projects
-- Preparing for interviews (so you can succeed once you actually get them)
+- Preparing for interviews
 
 _Note_: I did not use AI to write this post. The only thing I have to promote is
 a GitHub repository that is free to use if you find it helpful :)
@@ -49,7 +57,7 @@ using it for autofill, resume tailoring, and response / letter writing to
 varying degrees of success. The repo is here if you want to try this method out
 yourself:
 
-[AI Job Search System (GitHub)](https://github.com/r-fameli/joblin)
+[Joblin, an AI Job Search System (GitHub)](https://github.com/r-fameli/joblin)
 
 I used the Simplify browser extension to autofill most of my applications. This
 was especially helpful on Workday applications that require a lot of repetitive
@@ -57,7 +65,7 @@ input of work experience that is already listed on your resume. I did not pay
 for the premium version and used only the autofill and job tracking features. I
 originally tracked jobs in Notion, but I found the Simplify tracker to be
 slightly easier because it would often automatically copy the job description
-in.
+in. There are similar alternatives, but this is one I am most familar with.
 
 [Simplify Extension](https://simplify.jobs/)
 
@@ -140,6 +148,17 @@ can get better results.
 
 ### Applying Early, Automating Search and Filling
 
+Myriad strategies have emerged on how to apply to jobs. Two common archetypes
+are the "shotgun" approach, where you apply to as many jobs as possible, even if
+they are low fit, and the "sniper" approach, where you send higher-quality
+applications to only high-fit roles. I would recommend something closer to the
+"sniper" approach in the current market. Most job listings get absolutely
+inundated with low-quality applications, and these are easier than ever to
+filter out. You should prioritize roles where you can really stand out as a
+candidate. Ideally, this can also save you time to work on the other aspects of
+your job search, such as your projects or general skill-building (or just
+experiencing life away from LinkedIn in general).
+
 There are tons of custom job boards, so you can choose whatever board is most
 relevant to you. I primarily used LinkedIn with filters applied through Chrome
 extensions as well as Built In. [Hiring Cafe](https://hiring.cafe/) also often
@@ -152,14 +171,9 @@ applicants.
 
 I grew tired of checking these boards every day. However, scraping LinkedIn is
 increasingly difficult using conventional scraping technologies. I eventually
-found that I could automate the process using
-[Kimi WebBridge](https://www.kimi.com/features/webbridge), a browser automation
-tool for AI agents. Refer to the job application agent repository for more info
-on this.
-
-I used the free version of the [Simplify extension](https://simplify.jobs/) to
-fill out repetitive application questions. There are many alternatives, and you
-can also customize an AI agent to do this with some effort.
+found that I could partially automate the process of finding these through an AI
+agent system that I shared above. The Simplify extension above also helped to
+fill repetitive applications quickly.
 
 ### Being Human in Responses and Cover Letters (Don't be "Sloppy")
 
@@ -489,15 +503,29 @@ I had one interview in which I was tasked with solving a more abstract problem
 (mine was to find a way to get the average size of images across Wikipedia
 pages). The main thing to prioritize here is communicating well with the
 interviewer, asking clarifying questions, even potentially asking for help if
-you get stuck.
+you get stuck. Learning Python can be helpful, as you can get something running
+very quickly. FastAPI can be a useful framework to learn for similar reasons if
+you ever need to create a web API in short time.
+
+## Wrapping Up
+
+Congratulations on making it to the end of the guide! You should have a general
+idea of how to build a resume, find and fill job applications, and prepare for
+your interviews. Job searching in today's economy is a difficult and
+time-consuming process as the competition is intense for relatively few
+openings. However, following the above recommendations and staying current with
+industry trends should help you become a stronger candidate.
+
+Wishing you the best of luck in landing a role!
 
 ## Other Resources
 
 ### Subreddits
 
 - r/jobsearch - if you want to feel less alone in being frustrated about the
-  current market
+  current
+  - r/recruitinghell - if you want to vent / see others vent about recruiters
 - r/jobsearchhacks - occasionally some helpful info
 - r/cscareerquestions
-- r/interviewcoderHQ - good for scoping out what the interview process for
-  popular companies looks like
+- r/interviewcoderHQ - users often post what their interview loop looked like
+  for popular companies
