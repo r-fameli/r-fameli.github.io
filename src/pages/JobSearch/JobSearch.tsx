@@ -69,6 +69,14 @@ function JobSearch() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [handleScroll]);
 
+    useEffect(() => {
+        const prev = document.title;
+        document.title = "Riki's Job Search Guide";
+        return () => {
+            document.title = prev;
+        };
+    }, []);
+
     return (
         <div className="job-search-page">
             <aside className="job-search-sidebar">
